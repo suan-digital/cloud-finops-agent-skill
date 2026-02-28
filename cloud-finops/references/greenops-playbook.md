@@ -149,12 +149,47 @@ Schedule non-urgent workloads for periods when the grid runs on renewable energy
 - Training jobs during wind-heavy overnight periods
 - Report generation during low-carbon grid periods
 
+**Implementation tools for time-shifting and region-shifting:**
+
+| Tool | What It Does | Integration |
+|---|---|---|
+| Carbon Aware SDK (Green Software Foundation) | Returns optimal time/region for lowest carbon | REST API + CLI; integrates with schedulers |
+| Electricity Maps API | Real-time grid carbon intensity, 190+ countries | REST API; powers GCP carbon reporting |
+| WattTime API | Marginal emissions data by grid region | REST API; used by Azure carbon tooling |
+| KEDA Carbon Aware Scaler | Scales Kubernetes workloads based on carbon intensity | Kubernetes-native, uses Carbon Aware SDK |
+
 ### Region-Shifting
 
-Place workloads in regions with cleaner energy grids:
-- AWS: Oregon (us-west-2), Ireland (eu-west-1) — higher renewable mix
-- Azure: Sweden, Norway — near 100% renewable
-- GCP: Finland, Oregon — high renewable percentage
+Place workloads in regions with cleaner energy grids. Carbon intensity varies **200x** between
+the cleanest and dirtiest regions — this is not a rounding error.
+
+**Cleanest regions by provider** (lowest grid carbon intensity):
+
+| Provider | Region | Location | Grid Carbon Intensity | Notes |
+|---|---|---|---|---|
+| GCP | europe-north2 | Stockholm | 3 gCO2eq/kWh, 100% CFE | Hydro/wind grid |
+| GCP | northamerica-northeast1 | Montréal | 5 gCO2eq/kWh, 99% CFE | Hydro-dominated grid |
+| GCP | europe-west6 | Zürich | 15 gCO2eq/kWh, 98% CFE | Nuclear + hydro |
+| GCP | europe-west9 | Paris | 16 gCO2eq/kWh, 96% CFE | Nuclear-dominated grid |
+| GCP | europe-north1 | Finland | 39 gCO2eq/kWh, 98% CFE | Wind + nuclear |
+| GCP | us-west1 | Oregon | 79 gCO2eq/kWh, 87% CFE | Hydro + wind |
+| AWS | eu-north-1 | Stockholm | Low — >95% renewable grid | Hydro/wind grid |
+| AWS | us-west-2 | Oregon | Low — high renewable mix | Hydro-dominated grid |
+| Azure | Sweden Central | Gävle | ~15 gCO2eq/kWh | 100% hourly renewable matching |
+
+**High-carbon regions to avoid for flexible workloads:**
+
+| Provider | Region | Location | Grid Carbon Intensity |
+|---|---|---|---|
+| GCP | asia-south1 | Mumbai | 679 gCO2eq/kWh |
+| GCP | africa-south1 | Johannesburg | 657 gCO2eq/kWh |
+| GCP | europe-central2 | Warsaw | 643 gCO2eq/kWh |
+| GCP | us-east1 | South Carolina | 576 gCO2eq/kWh |
+
+GCP publishes per-region carbon-free energy (CFE) percentages and grid carbon intensity at
+[cloud.google.com/sustainability/region-carbon](https://cloud.google.com/sustainability/region-carbon).
+AWS and Azure publish aggregate renewable energy data but not per-region grid intensity — use
+Electricity Maps or WattTime for comparable cross-provider data.
 
 ### Demand-Shaping
 
@@ -167,10 +202,18 @@ Reduce compute intensity during grid stress periods:
 
 | Provider | Tool | Coverage |
 |---|---|---|
-| AWS | Customer Carbon Footprint Tool | Account-level, monthly |
-| Azure | Emissions Impact Dashboard | Scope 1, 2, 3 |
-| GCP | Carbon Footprint Dashboard | Project-level, near real-time |
-| Third-party | Cloud Carbon Footprint (open source) | Multi-cloud |
+| AWS | Customer Carbon Footprint Tool | Account-level, monthly, regional breakdown |
+| Azure | Emissions Impact Dashboard | Scope 1, 2, 3 emissions |
+| GCP | Carbon Footprint Dashboard | Project-level, near real-time, per-region CFE% |
+| Third-party | Cloud Carbon Footprint (open source) | Multi-cloud estimation |
+| Third-party | Electricity Maps | Real-time grid intensity, 190+ countries |
+| Third-party | Carbon Aware SDK | Optimal time/region selection for lowest carbon |
+| Standard | SCI (ISO/IEC 21031:2024) | Software Carbon Intensity — standard formula for application-level carbon rate |
+
+**The SCI formula:** `SCI = (E × I) + M per R` — where E = energy consumed, I = grid carbon
+intensity, M = embodied carbon of hardware, R = functional unit (per request, per user, per
+minute). Use SCI to compare the carbon efficiency of architectural alternatives, not just
+absolute emissions.
 
 ## GreenOps Assessment Questions
 
@@ -182,3 +225,5 @@ Reduce compute intensity during grid stress periods:
 6. What instance generations are in use? (Older = less efficient)
 7. Is sustainability a board-level or compliance requirement?
 8. Are batch workloads eligible for time-shifting or region-shifting?
+9. Are workloads in high-carbon regions that could run in cleaner ones?
+10. Is real-time carbon intensity data (Electricity Maps, WattTime) integrated into scheduling?
