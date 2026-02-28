@@ -211,6 +211,61 @@ Track and report tag coverage:
 | Untagged spend report | Weekly | Finance + FinOps |
 | Compliance trend | Monthly | Leadership |
 
+## Cost Allocation Models
+
+Tags enable cost allocation, but allocation requires a model. Choose based on organizational maturity and culture.
+
+### Showback vs Chargeback
+
+| Model | Definition | When to Use | Maturity |
+|---|---|---|---|
+| **Showback** | Display cost data to teams — no financial impact | Starting out, building awareness | Crawl/Walk |
+| **Chargeback** | Transfer costs to team budgets — real financial impact | Mature practice, clear ownership | Walk/Run |
+| **Hybrid** | Chargeback for direct resources, showback for shared | Most organizations land here | Walk/Run |
+
+**Start with showback.** Chargeback without accurate data creates political fights, not accountability. Graduate to chargeback only when tagging coverage exceeds 90% and teams trust the data.
+
+### Showback Implementation
+
+1. **Build dashboards** — cost by team, environment, service (weekly)
+2. **Send automated reports** — email/Slack cost summaries to team leads
+3. **Add context** — show cost trends, anomalies, and peer comparisons
+4. **No budget consequences** — purely informational in this phase
+5. **Track behavior change** — measure whether visibility alone drives optimization
+
+Showback alone reduces waste by 15–25% in organizations where teams had no prior cost visibility.
+
+### Chargeback Implementation
+
+1. **Define the billing unit** — team, business unit, cost center, or product
+2. **Map tags to billing units** — each billing unit maps to tag values
+3. **Set allocation frequency** — monthly aligned with financial close
+4. **Establish dispute process** — teams must be able to challenge incorrect charges
+5. **Integrate with finance systems** — export allocations to ERP or GL
+
+### Shared Cost Distribution
+
+Not all costs map cleanly to one team. Shared services (networking, security, platform infrastructure, support contracts) require a distribution strategy.
+
+| Strategy | How It Works | Best For |
+|---|---|---|
+| **Proportional** | Distribute by each team's % of total direct spend | General shared infrastructure |
+| **Even split** | Divide equally among consuming teams | Services with equal consumption |
+| **Usage-based** | Distribute by measured consumption (requests, data transfer) | APIs, shared databases, platform services |
+| **Fixed allocation** | Pre-agreed percentages per team | Enterprise licenses, support contracts |
+
+**Recommended approach:** Allocate direct costs (70–80% of spend) via tags. Distribute shared costs (20–30%) proportionally. Don't over-engineer shared cost splits — a reasonable approximation that everyone accepts beats a precise formula nobody trusts.
+
+### Unattributable Costs
+
+Some costs resist attribution: cross-AZ data transfer, DNS, IAM, CloudTrail, organization-level services. Handle these explicitly:
+
+1. **Categorize** — list all unattributable cost categories and their monthly totals
+2. **Minimize** — improve tagging to shrink the unattributable pool over time
+3. **Distribute** — apply a flat overhead rate or proportional distribution
+4. **Report separately** — show unattributable costs as a line item, not hidden in team totals
+5. **Target** — keep unattributable costs below 10% of total spend
+
 ## Common Anti-Patterns
 
 | Anti-Pattern | Problem | Fix |
