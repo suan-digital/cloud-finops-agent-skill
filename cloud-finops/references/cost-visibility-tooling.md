@@ -62,6 +62,34 @@ Every cloud provider includes cost management tools. Start here before adding th
 - Spend exceeds $100K/month (ROI justifies tool cost)
 - Engineering needs self-service cost access
 
+### Open-Source FinOps Tools
+
+Free and community-maintained tools for cost visibility — especially valuable for organizations
+at Foundation (Shu) maturity or with limited tooling budgets.
+
+| Tool | Focus | License | Strengths |
+|---|---|---|---|
+| **OpenCost** | Kubernetes cost monitoring | Apache 2.0 | CNCF Sandbox project, real-time K8s cost allocation, Prometheus integration |
+| **Cloud Carbon Footprint** | Carbon emissions estimation | Apache 2.0 | Multi-cloud carbon tracking, visualization dashboard |
+| **Komiser** | Multi-cloud cost visibility | Elastic License 2.0 | Cloud resource inventory, cost insights, 100+ cloud services |
+| **Infracost (Community)** | IaC cost estimation | Apache 2.0 | PR-time cost diffs for Terraform, free for open-source projects |
+
+**OpenCost vs. Kubecost — when to upgrade:**
+
+| Capability | OpenCost (free) | Kubecost (commercial) |
+|---|---|---|
+| Real-time cost allocation | Yes | Yes |
+| Namespace/label cost breakdown | Yes | Yes |
+| Multi-cluster visibility | Limited | Yes (unified view) |
+| Savings recommendations | No | Yes |
+| Alerting and governance | Basic | Advanced |
+| Cloud cost integration (non-K8s) | No | Yes |
+| Support | Community | Commercial SLA |
+
+**Start with OpenCost** if you run Kubernetes and need cost allocation without budget for
+commercial tools. Upgrade to Kubecost when you need multi-cluster views, automated savings
+recommendations, or commercial support.
+
 ### Shift-Left Cost Tools
 
 Cost visibility at the point of decision — before code merges.
@@ -112,6 +140,7 @@ The FinOps Open Cost & Usage Specification (FOCUS) normalizes cost data across p
 
 **Shu (Foundation):**
 - Native cloud cost tools (free, already available)
+- OpenCost for Kubernetes cost allocation (free, low setup effort)
 - Basic alerting (budget thresholds, anomaly detection)
 - Manual cost review cadence (weekly)
 - Tag coverage reporting
@@ -138,10 +167,11 @@ The FinOps Open Cost & Usage Specification (FOCUS) normalizes cost data across p
 | 2 | Set up budget alerts and anomaly detection | Low | Prevent surprises |
 | 3 | Implement tagging standards | Medium | Enable attribution |
 | 4 | Add shift-left tooling (Infracost) | Low-Medium | Engineer awareness |
-| 5 | Build team-level cost dashboards | Medium | Accountability |
-| 6 | Add Kubecost (if K8s) | Medium | Container visibility |
-| 7 | Implement FOCUS (if multi-cloud) | Medium | Normalization |
-| 8 | Deploy AI-powered cost tools | Medium-High | Conversational access |
+| 5 | Add OpenCost (if K8s, budget-constrained) | Low | Free K8s cost visibility |
+| 6 | Build team-level cost dashboards | Medium | Accountability |
+| 7 | Upgrade to Kubecost (if outgrowing OpenCost) | Medium | Advanced K8s visibility |
+| 8 | Implement FOCUS (if multi-cloud) | Medium | Normalization |
+| 9 | Deploy AI-powered cost tools | Medium-High | Conversational access |
 
 ## Anomaly Detection
 
@@ -178,16 +208,17 @@ cost anomalies should be treated like production incidents.
 8. What's the cost of the cost tools? (Tool ROI)
 9. Are AI/ML costs visible separately from infrastructure costs?
 10. Is there an anomaly response protocol?
+11. Have open-source options (OpenCost, Infracost Community) been evaluated before committing to commercial tools?
 
 ## Tool Selection Decision Tree
 
 ```
 Single cloud or multi-cloud?
 ├── Single cloud:
-│   ├── Spend <$100K/month → Native tools + Infracost
+│   ├── Spend <$100K/month → Native tools + Infracost + OpenCost (if K8s)
 │   └── Spend >$100K/month → Native tools + Infracost + consider third-party
 └── Multi-cloud:
-    ├── Kubernetes-heavy → Kubecost + Vantage or CloudHealth
+    ├── Kubernetes-heavy → OpenCost or Kubecost + Vantage or CloudHealth
     ├── AI-heavy → CloudZero or custom + Infracost
     └── Enterprise governance → CloudHealth or Apptio + Infracost
 
