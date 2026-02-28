@@ -97,9 +97,9 @@ Optimization is a project, not a practice. Savings disappear within a quarter.
 | Capability | Description | Crawl | Walk | Run |
 |---|---|---|---|---|
 | **Data Ingestion** | Collect cost/usage data from all sources | Manual exports, single provider | Automated ingestion, multi-provider | Real-time, normalized (FOCUS), all sources |
-| **Cost Allocation** | Attribute costs to teams/products/features | Basic account-level allocation | Tag-based allocation, 70%+ coverage | Full allocation, shared cost distribution, 95%+ |
-| **Tagging & Labeling** | Consistent metadata on all resources | Standard defined, <50% coverage | Enforced, 80%+ coverage | Automated, 95%+, self-healing |
-| **Shared Cost Management** | Distribute shared/common costs fairly | Ignored or split evenly | Proportional allocation by usage | Dynamic allocation with agreed methodology |
+| **Allocation** | Attribute costs to teams/products/features — includes tagging, labeling, and shared cost distribution | Basic account-level allocation, <50% tag coverage | Tag-based allocation, 70%+ coverage, proportional shared costs | Full allocation, 95%+ coverage, dynamic shared cost methodology, self-healing tags |
+| **Reporting & Analytics** | Deliver cost insights to stakeholders | Basic monthly reports | Automated dashboards by audience | Self-service analytics, conversational cost queries |
+| **Anomaly Management** | Detect and respond to unexpected cost changes | Manual discovery, monthly review | Automated alerts, weekly review | Real-time detection, automated response, <1hr to investigation |
 
 ### Domain 2: Quantify Business Value (5 capabilities)
 
@@ -115,7 +115,7 @@ Optimization is a project, not a practice. Savings disappear within a quarter.
 
 | Capability | Description | Crawl | Walk | Run |
 |---|---|---|---|---|
-| **Architecture Optimization** | Design for cost efficiency | Reactive — fix after deployment | Cost in architecture reviews | Cost is a first-class design constraint |
+| **Architecting for Cloud** | Design for cost efficiency | Reactive — fix after deployment | Cost in architecture reviews | Cost is a first-class design constraint |
 | **Workload Optimization** | Right-size and schedule workloads | Ad-hoc right-sizing | Regular right-sizing cycles | Continuous, automated right-sizing |
 | **Rate Optimization** | Reduce unit costs via commitments/pricing | No commitments | Basic SP/RI coverage, 60-70% util | Managed portfolio, 85%+ utilization |
 | **Licensing & SaaS** | Optimize software licensing and SaaS costs | No visibility | License inventory tracked | Optimized, right-sized, consolidated |
@@ -126,13 +126,13 @@ Optimization is a project, not a practice. Savings disappear within a quarter.
 | Capability | Description | Crawl | Walk | Run |
 |---|---|---|---|---|
 | **FinOps Practice Operations** | Run the FinOps function | Part-time role | Dedicated team | Embedded in engineering culture |
+| **FinOps Education & Enablement** | Build FinOps skills across the organization | Ad-hoc knowledge sharing | Training programs, certification paths | Continuous learning culture, FinOps embedded in onboarding |
 | **Onboarding Workloads** | Bring new workloads under FinOps governance | Manual, inconsistent | Standardized onboarding process | Automated, self-service |
-| **Cloud Policy & Governance** | Enforce cost-related policies | Manual reviews | Policy-as-code, basic enforcement | Automated guardrails, self-healing |
+| **Policy & Governance** | Enforce cost-related policies | Manual reviews | Policy-as-code, basic enforcement | Automated guardrails, self-healing |
 | **FinOps Assessment** | Evaluate and improve FinOps maturity | No formal assessment | Annual assessment | Continuous improvement metrics |
 | **Invoicing & Chargeback** | Bill internal teams for cloud usage | Shared cost center | Showback reports | Full chargeback with team accountability |
 | **FinOps Tools & Services** | Select and manage FinOps tooling | Native cloud tools only | Third-party tools integrated | Unified platform, custom integrations |
 | **Intersecting Disciplines** | Connect FinOps with DevOps, Security, etc. | Siloed | Some collaboration | Fully integrated practices |
-| **Reporting & Analytics** | Deliver cost insights to stakeholders | Basic monthly reports | Automated dashboards by audience | Self-service analytics, conversational cost queries |
 
 ## FinOps Scopes
 
@@ -145,6 +145,33 @@ FinOps now extends beyond public cloud. The "Cloud+" era covers:
 | **Data Center** | On-premises, colocation, hybrid infrastructure |
 | **AI** | LLM inference, GPU compute, model training, agentic workflows |
 | **Licensing** | Software licenses, enterprise agreements, marketplace purchases |
+
+## FinOps Personas
+
+### Core Personas
+
+These are the primary stakeholders in any FinOps practice:
+
+| Persona | Role in FinOps | Key Concerns |
+|---|---|---|
+| **FinOps Practitioner** | Central FinOps function — facilitates, evangelizes, enables | Capability maturity, tooling, process adoption, cross-team alignment |
+| **Engineering / DevOps** | Owns cloud usage at the point of decision | Architecture efficiency, right-sizing, IaC cost patterns, deployment cost |
+| **Finance / Procurement** | Manages budgets, forecasts, and vendor contracts | Unit economics, forecasting accuracy, commitment ROI, chargeback |
+| **Executive (CTO/CFO/CIO)** | Sponsors and funds FinOps, sets organizational direction | Business impact, cost trends, strategic investments, risk |
+| **Product Owner** | Connects cloud cost to product economics | Cost per feature, cost per customer, budget impact on roadmap |
+| **Platform Engineering** | Controls infrastructure abstractions that determine cost structure | Cost-efficient defaults, golden paths, namespace attribution, self-service |
+
+### Allied Personas
+
+These stakeholders intersect with FinOps in specific domains:
+
+| Persona | FinOps Intersection |
+|---|---|
+| **ITAM (IT Asset Management)** | License optimization, SaaS rationalization, hybrid cost modeling |
+| **Security** | Compliance cost, secure-by-default architectures, audit trail |
+| **Sustainability / ESG** | Carbon-aware computing, GreenOps alignment, emissions reporting |
+| **Data / ML Engineering** | Training cost optimization, inference economics, GPU utilization |
+| **Procurement** | Contract negotiation, commitment instruments, vendor management |
 
 ## FinOps and Platform Engineering
 
@@ -227,10 +254,10 @@ For each domain, determine the maturity of the highest-impact capability:
 
 | Domain | Key Capability | Current Maturity | Target | Gap |
 |---|---|---|---|---|
-| Understand Usage & Cost | Cost Allocation | ? | Walk | ? |
+| Understand Usage & Cost | Allocation | ? | Walk | ? |
 | Quantify Business Value | Unit Economics | ? | Walk | ? |
 | Optimize Usage & Cost | Rate Optimization | ? | Walk | ? |
-| Manage the Practice | Cloud Governance | ? | Walk | ? |
+| Manage the Practice | Policy & Governance | ? | Walk | ? |
 
 ### Mapping to Shuhari
 

@@ -2,6 +2,45 @@
 
 All notable changes to the Cloud FinOps Agent Skill will be documented in this file.
 
+## [2.1.0] — 2026-02-28
+
+### Changed
+
+- **SKILL.md** — Optimized for LLM consumption and Claude Code skill loading
+  - Removed **Framework Foundation** section (67 lines) — content already lives in `finops-framework.md`, loaded on-demand via routing
+  - Removed **Reference Library** section (19 lines) — all files already reachable through routing tables
+  - Removed allied personas line — no actionable guidance
+  - Added trigger keywords to frontmatter description for better skill discovery (AWS, Azure, GCP, OCI, right-sizing, commitment strategy, etc.)
+  - Persona table: renamed columns to directive form (`Speak in terms of` / `Keep out`)
+  - Routing table: shortened problem labels for faster token scanning
+  - Analysis dimension headers: renamed to directive form (`Always apply` / `If AI/ML workloads exist`)
+  - Merged redundant quality standards bullets (9 → 7)
+  - Reduced from 228 lines to ~145 lines — every line provides routing or behavioral value
+  - Version bump to 2.1.0
+
+## [2.0.0] — 2026-02-28
+
+### Changed
+
+- **SKILL.md** — Structural rewrite for FinOps Foundation framework alignment and readability
+  - Added **Framework Foundation** section: 6 principles, 3 phases, 4 domains (22 capabilities), 5 scopes, 6 core personas, Crawl/Walk/Run ↔ Shu/Ha/Ri maturity bridge
+  - Replaced rigid 6-step reasoning sequence with adaptive **How to Engage** (full assessment, targeted question, file analysis)
+  - Added 3 new routing scenarios: forecasting, SaaS spend, platform engineering
+  - Split analysis dimensions into **Core** (6) and **AI** (3) with explicit skip logic
+  - Added **AI Value Governance** as analysis dimension
+  - Added **Personas** table with focus/avoid guidance for 6 core personas
+  - Replaced 30-line file inventory with compact grouped **Reference Library**
+  - Fixed section count: "9-section report" → "10-section report" (matching output-format.md)
+  - Removed contradictory "do not skip steps" / "adapt the sequence" instructions
+  - Version bump to 2.0.0
+
+- **finops-framework.md** — Aligned capabilities with official FinOps Foundation framework
+  - Domain 1: Consolidated Cost Allocation, Tagging & Labeling, Shared Cost Management into **Allocation**; added **Reporting & Analytics** and **Anomaly Management**
+  - Domain 3: Renamed "Architecture Optimization" → **Architecting for Cloud**
+  - Domain 4: Added **FinOps Education & Enablement**; moved Reporting & Analytics to Domain 1; renamed "Cloud Policy & Governance" → **Policy & Governance**
+  - Added **FinOps Personas** section (6 core + 5 allied personas)
+  - Updated assessment checklist to use official capability names
+
 ## [1.0.0] — 2026-02-27
 
 ### Added
