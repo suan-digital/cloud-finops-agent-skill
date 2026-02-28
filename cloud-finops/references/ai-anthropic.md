@@ -47,20 +47,32 @@ Anthropic supports prompt caching for repeated system prompts and context:
 
 **How it works:**
 - Cache frequently used prompt prefixes (system prompts, reference documents)
-- Cached tokens cost ~10% of regular input price
-- Cache has a TTL (time-to-live) — refreshed on each use
-- Minimum cacheable prefix: 1024 tokens (Haiku), 2048 tokens (Sonnet/Opus)
+- **Cache write:** 1.25x base input price (25% premium to write to cache)
+- **Cache read (hit):** 0.1x base input price (90% discount on cached tokens)
+- **TTL:** 5 minutes by default, refreshed on each cache hit
+- Minimum cacheable prefix: 1024 tokens (all models)
+
+**Cost mechanics:** Every cache miss pays the 1.25x write cost. Every hit within the 5-minute TTL pays 0.1x. If requests are infrequent (>5 min apart), caching costs more — you pay the write premium every time with no read benefit.
+
+**Break-even:** You need at least 2 cache reads per TTL window to save money. At 3+ reads per window, savings are substantial. For high-frequency use cases (chatbots, agentic loops), caching is almost always worth it.
 
 **Best use cases:**
-- System prompts repeated across requests
-- Reference documents used in RAG
+- System prompts repeated across requests (high hit rate)
+- Reference documents used in RAG (stable prefix)
 - Few-shot examples included in every call
+- Agentic workflows with repeated tool definitions
 - Long context windows with stable prefixes
 
-**Savings example:**
-| Scenario | Without Cache | With Cache | Savings |
-|---|---|---|---|
-| 10K token system prompt, 1000 req/day, Sonnet | $30/day input | $3/day cached | 90% on cached portion |
+**Savings example (Sonnet, 10K token system prompt, 1000 req/day):**
+
+| Scenario | Daily Cost | Savings vs. No Cache |
+|---|---|---|
+| No cache | $30.00/day | — |
+| Cache, 1 req every 10 min (frequent misses) | $27.50/day | 8% |
+| Cache, 5 req/min (high hit rate) | $4.50/day | 85% |
+| Cache, 20 req/min (very high hit rate) | $3.20/day | 89% |
+
+*Actual savings depend on request frequency relative to the 5-minute TTL.*
 
 ### Batch API
 
