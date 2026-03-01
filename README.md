@@ -1,6 +1,6 @@
-# Cloud FinOps Agent Skill
+# Cloud FinOps
 
-**Give any LLM structured FinOps domain knowledge.** Cloud cost optimization, AI economics, and the FinOps Foundation framework — installable in one command.
+**Give any AI agent FinOps expertise.** Cloud cost optimization using the FinOps Foundation framework — installable in one command via [skills.sh](https://skills.sh).
 
 ## Quick Start
 
@@ -8,22 +8,20 @@
 npx skills add suan-digital/cloud-finops
 ```
 
-Works with Claude Code, Cursor, Codex, OpenCode, and 40+ other agents. See [INSTALLATION.md](INSTALLATION.md) for all installation methods.
+Works with Claude Code, Cursor, Codex, OpenCode, and [40+ other agents](https://skills.sh/docs/agents). See [INSTALLATION.md](INSTALLATION.md) for all methods.
 
-## What This Does
+## What It Does
 
-Drop this skill into any LLM-powered development environment and it becomes a FinOps advisor that:
+This skill turns any AI agent into a FinOps advisor that:
 
-- **Asks before prescribing** — Structured intake protocol gathers context before analysis
+- **Asks before prescribing** — Structured intake gathers context before analysis
 - **Assesses maturity** — Shuhari (守破離) framework goes deeper than Crawl-Walk-Run
-- **Routes by business problem** — "Our AI costs are out of control" triggers different references than "We need a commitment strategy"
+- **Routes by business problem** — "AI costs are out of control" triggers different references than "We need a commitment strategy"
 - **Applies 8 analysis dimensions** — From FinOps practice assessment to GreenOps waste remediation
-- **Outputs structured reports** — 9-section template that executives can forward to their CFO
+- **Outputs structured reports** — 10-section template that executives can forward to their CFO
 - **Knows provider specifics** — AWS, Azure, GCP, OCI, plus AI providers and data platforms
 
 ## Coverage
-
-### Reference Files
 
 | Category | Files | Topics |
 |---|---|---|
@@ -35,18 +33,13 @@ Drop this skill into any LLM-powered development environment and it becomes a Fi
 | **AI Providers** | 4 | Anthropic/Claude, AWS Bedrock, Azure OpenAI, Google Vertex AI |
 | **Data Platforms** | 2 | Databricks (DBU optimization), Snowflake (credit optimization) |
 
-### 8 Analysis Dimensions
+## Sample Prompts
 
-| Dimension | Key Question |
-|---|---|
-| FinOps Practice Assessment | Which of 22 capabilities are gaps? |
-| Phase Positioning | Inform → Optimize → Operate — where stuck? |
-| Maturity Assessment | Shu / Ha / Ri — which stage? |
-| Architecture-Cost Alignment | Is cost a first-class design constraint? |
-| AI Cost Visibility | Is the 4-5x hidden cost known? |
-| Inference Economics | Model routing, caching, attribution? |
-| Waste Remediation | Which GreenOps fixes apply? |
-| Cost Visibility & Tooling | Can anyone query costs conversationally? |
+- **"Assess our FinOps maturity"** — Intake protocol + Shuhari assessment
+- **"Our AWS bill is $80K/month, too high"** — Intake + AWS-specific + architecture-cost analysis
+- **"AI inference costs are out of control"** — Intake + inference economics + AI cost visibility
+- **"Review this Terraform file for cost issues"** — File analysis protocol
+- **"We need a commitment strategy for Azure"** — Azure-specific + FinOps framework
 
 ## What Makes This Different
 
@@ -57,34 +50,25 @@ Drop this skill into any LLM-powered development environment and it becomes a Fi
 | **Maturity model** | Crawl/Walk/Run | Shuhari 守破離 (philosophical depth) |
 | **Cost philosophy** | "Optimize existing spend" | "80% locked at design time — design for cost" |
 | **AI costs** | Token pricing only | 4-5x total cost multiplier (hidden costs) |
-| **Output** | Unstructured | 9-section report template |
+| **Output** | Unstructured | 10-section report template |
 | **File analysis** | None | Terraform, K8s, bills, architecture docs |
 | **Adaptation** | One-size-fits-all | By spend tier + AI maturity |
-
-## Sample Prompts
-
-Try these after installation:
-
-- **"Assess our FinOps maturity"** → Triggers intake protocol + Shuhari assessment
-- **"Our AWS bill is $80K/month, too high"** → Triggers intake + AWS-specific + architecture-cost analysis
-- **"AI inference costs are out of control"** → Triggers intake + inference economics + AI cost visibility
-- **"Review this Terraform file for cost issues"** → File analysis protocol
-- **"We need a commitment strategy for Azure"** → Azure-specific + finops framework
 
 ## Project Structure
 
 ```
 cloud-finops/
-├── README.md               ← You are here
-├── INSTALLATION.md         ← Install methods
+├── .claude-plugin/
+│   └── marketplace.json    ← skills.sh marketplace config
+├── skills/
+│   └── cloud-finops/
+│       ├── SKILL.md        ← Entry point (agentskills.io spec)
+│       └── references/     ← 25 domain reference files
+├── INSTALLATION.md
+├── CHANGELOG.md
 ├── LICENSE.md              ← CC BY-SA 4.0
-├── CHANGELOG.md            ← Version history
-├── .github/
-│   └── CONTRIBUTING.md     ← How to contribute
-└── skills/
-    └── cloud-finops/
-        ├── SKILL.md        ← Entry point
-        └── references/     ← Domain reference files
+└── .github/
+    └── CONTRIBUTING.md
 ```
 
 ## Contributing
@@ -93,7 +77,6 @@ See [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md). Contributions welcome �
 - Updated pricing data
 - New optimization patterns from real engagements
 - Additional provider coverage
-- Translations
 
 ## License
 
@@ -104,8 +87,6 @@ CC BY-SA 4.0 — See [LICENSE.md](LICENSE.md)
 ## About Suan Digital
 
 Cloud & AI Advisory. Less burn. More return.
-
-We help enterprises make smarter technology investments. Cloud and AI solutions that scale. Spend that actually delivers.
 
 - Website: [suan.digital](https://suan.digital)
 - Contact: [suan.digital/contact](https://suan.digital/contact)
