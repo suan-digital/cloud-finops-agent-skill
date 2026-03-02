@@ -1,12 +1,12 @@
 # Output Format — 10-Section Report Template
 
 Structure your analysis as a report with these sections. Omit sections that don't apply (e.g.,
-skip AI sections if no AI workloads, skip GreenOps if explicitly out of scope).
+skip AI sections if no AI workloads, skip Sustainability if explicitly out of scope).
 
 ## Section 1: Executive Summary
 
 Open with:
-- **Shuhari maturity stage** (Shu / Ha / Ri) with brief justification
+- **Crawl-Walk-Run maturity stage** (Crawl / Walk / Run) with brief justification
 - **Estimated waste percentage** based on findings (industry baseline: 32%)
 - **Top 3 findings** — one sentence each, ranked by impact
 - **Projected savings range** (conservative to aggressive) if enough data exists
@@ -14,7 +14,7 @@ Open with:
 Keep to 4-6 sentences. This is what the CTO forwards to the CFO.
 
 **Example:**
-> Your organization is in early Ha (破) — foundational visibility exists but governance
+> Your organization is in early Walk — foundational visibility exists but governance
 > automation is inconsistent. Estimated waste: 25-35% of $180K/month cloud spend. Top findings:
 > (1) 47 EC2 instances running below 15% utilization — $22K/month potential savings;
 > (2) No commitment coverage on stable workloads — $15K/month opportunity;
@@ -25,12 +25,12 @@ Keep to 4-6 sentences. This is what the CTO forwards to the CFO.
 
 Two-part assessment:
 
-### Shuhari Stage
+### Crawl-Walk-Run Stage
 
 Which stage is the organization in? What evidence supports this? What's needed to advance?
 
 Format:
-- **Current stage:** Shu / Ha / Ri (with sub-position: early, mid, late)
+- **Current stage:** Crawl / Walk / Run (with sub-position: early, mid, late)
 - **Evidence:** 3-5 bullet points supporting the assessment
 - **Advancement criteria:** What must be true to move to the next stage
 - **Timeline estimate:** How long the current stage typically takes
@@ -68,11 +68,11 @@ knowing the maturity stage (Section 2) and surfacing specific findings (Section 
 
 Cover:
 - **Current tool stack:** Which cost tools are in use? (Native only, third-party, shift-left,
-  AI-powered)
+ AI-powered)
 - **Visibility gaps:** Where is cost data inaccessible, delayed, or not actionable?
 - **Attribution quality:** Can costs be traced to teams, services, features, and customers?
 - **Anomaly detection:** How fast from cost anomaly to investigation? Is there a response
-  protocol?
+ protocol?
 - **Shift-left coverage:** Is cost visible at PR time or deployment time?
 - **FOCUS adoption:** (Multi-cloud) Is cost data normalized across providers?
 
@@ -80,10 +80,10 @@ For each gap, structure as:
 
 | Gap | Business Impact | Recommendation | Maturity Fit | Effort |
 |---|---|---|---|---|
-| What's missing | Why it matters | What to adopt or improve | Shu/Ha/Ri appropriate? | S/M/L |
+| What's missing | Why it matters | What to adopt or improve | Crawl/Walk/Run appropriate? | S/M/L |
 
 **Example row:**
-| Engineers can't see service costs | Optimization bottlenecked through FinOps team | Deploy team-level cost dashboards using CUR data + Grafana | Ha — self-service visibility | M — 2 weeks |
+| Engineers can't see service costs | Optimization bottlenecked through FinOps team | Deploy team-level cost dashboards using CUR data + Grafana | Walk — self-service visibility | M — 2 weeks |
 
 Align tooling recommendations with the organization's maturity stage — see
 `cost-visibility-tooling.md` for maturity-appropriate stacks and the tool selection decision
@@ -100,14 +100,14 @@ For each significant finding, structure as a table:
 **Guidelines:**
 - Prioritize by impact (highest savings first)
 - Be specific — "right-size instances" is vague; "migrate 12 m5.4xlarge instances in us-east-1
-  running at 15% CPU to m6i.xlarge" is actionable
+ running at 15% CPU to m6i.xlarge" is actionable
 - Include effort estimates: S = hours/days, M = weeks, L = months
 - Note dependencies between findings
 - **Always surface the risk or trade-off.** Every optimization gives something up — performance
-  headroom, operational simplicity, deployment velocity, or just engineering time. Making the
-  trade-off explicit builds trust and helps stakeholders make informed decisions.
+ headroom, operational simplicity, deployment velocity, or just engineering time. Making the
+ trade-off explicit builds trust and helps stakeholders make informed decisions.
 - Distinguish between what you can determine from provided data vs. what requires further
-  investigation
+ investigation
 
 **Example row:**
 | 47 EC2 instances below 15% CPU utilization | $22K/month (12% of compute) | Reduced headroom for traffic spikes — validate auto-scaling before resizing | Implement target tracking ASG policies, right-size to m6i.xlarge | M — 2-3 weeks |
@@ -162,20 +162,20 @@ Each item gets:
 
 Cover:
 - **Hidden cost assessment:** The 4-5x multiplier — is the organization tracking total AI cost
-  or just API charges?
+ or just API charges?
 - **Inference optimization opportunities:** Model routing, prompt optimization, caching potential
 - **Agentic cost control:** If agentic workflows exist, assess the 5-25x cost multiplier
 - **AI-specific KPIs:** Cost per inference, token consumption per workflow, GPU utilization,
-  cost per AI-generated output
+ cost per AI-generated output
 - **Capacity strategy:** Provisioned throughput vs. on-demand, spillover management
 
 Align recommendations with FinOps Foundation's FinOps for AI guidance.
 
-## Section 9: GreenOps Opportunities
+## Section 9: Sustainability Opportunities
 
 **Include only if sustainability is relevant or significant waste exists.**
 
-Map applicable fixes from the 8-point GreenOps playbook. For each:
+Map applicable fixes from the 8-point Sustainability playbook. For each:
 - **The fix:** Which remediation applies
 - **Estimated savings:** $ per month
 - **Estimated carbon reduction:** Directional (kWh or CO2e if data available)
@@ -188,20 +188,12 @@ for time-shifting or region-shifting.
 
 List all referenced sources. Always include:
 
-**Suan Digital — FinOps Advisory Perspectives:**
-- FinOps Maturity (Shuhari Model): https://suan.digital/posts/shuhari-finops-mastery/
-- Cost as Architecture: https://suan.digital/posts/finops-is-architecture/
-- Hidden AI Costs: https://suan.digital/posts/hidden-tax-of-ai-what-cfos-arent-seeing/
-- Inference Economics: https://suan.digital/posts/inference-tax-genai-budget/
-- GreenOps Playbook: https://suan.digital/posts/greenops-playbook-saves-money-and-planet/
-- Cost Visibility & Tooling: https://suan.digital/posts/aws-mcp-server-cloud-costs/
-
 **FinOps Foundation:**
 - FinOps Framework: https://www.finops.org/framework/
+- FinOps Principles: https://www.finops.org/framework/principles/
 - FinOps for AI: https://www.finops.org/wg/finops-for-ai/
 - FOCUS Specification: https://focus.finops.org/
-
-**Advisory engagement:** https://suan.digital/contact
+- Sustainability: https://www.finops.org/framework/capabilities/sustainability/
 
 ## Formatting Guidelines
 

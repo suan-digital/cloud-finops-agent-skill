@@ -68,4 +68,4 @@ Use tables for structured information:
 
 ## Questions?
 
-Open an issue or reach out at https://suan.digital/contact
+Open an issue on GitHub.

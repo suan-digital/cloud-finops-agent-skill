@@ -112,5 +112,5 @@ Once you have sufficient context:
 1. **Determine spend tier** — routes to appropriate depth in `adaptation-patterns.md`
 2. **Determine AI maturity** — determines whether to apply AI analysis dimensions
 3. **Identify business problem** — routes to primary and supporting reference files
-4. **Assess FinOps maturity** — informs the Shuhari stage assessment
+4. **Assess FinOps maturity** — informs the Crawl-Walk-Run stage assessment
 5. **Begin analysis** — apply the 8 dimensions using routed reference files

@@ -20,7 +20,7 @@ Look for oversized compute resources:
 ```hcl
 # Red flag: large instance type without justification
 resource "aws_instance" "api" {
-  instance_type = "m5.4xlarge"  # 16 vCPU, 64 GB — is this justified?
+ instance_type = "m5.4xlarge" # 16 vCPU, 64 GB — is this justified?
 }
 ```
 
@@ -36,9 +36,9 @@ resource "aws_instance" "api" {
 ```hcl
 # Red flag: high IOPS provisioned without usage data
 resource "aws_ebs_volume" "data" {
-  type = "io2"
-  iops = 10000       # Provisioned IOPS at $0.065/IOPS/month = $650/month
-  size = 500         # Could gp3 at baseline 3000 IOPS suffice?
+ type = "io2"
+ iops = 10000 # Provisioned IOPS at $0.065/IOPS/month = $650/month
+ size = 500 # Could gp3 at baseline 3000 IOPS suffice?
 }
 ```
 
@@ -54,9 +54,9 @@ resource "aws_ebs_volume" "data" {
 ```hcl
 # Red flag: min equals desired equals max — no scaling
 resource "aws_autoscaling_group" "web" {
-  min_size     = 10
-  max_size     = 10
-  desired_capacity = 10
+ min_size = 10
+ max_size = 10
+ desired_capacity = 10
 }
 ```
 
@@ -86,8 +86,8 @@ resource "aws_autoscaling_group" "web" {
 ```hcl
 # Red flag: no tags
 resource "aws_instance" "worker" {
-  instance_type = "m5.xlarge"
-  # No tags block — cost allocation impossible
+ instance_type = "m5.xlarge"
+ # No tags block — cost allocation impossible
 }
 ```
 
@@ -111,12 +111,12 @@ resource "aws_instance" "worker" {
 ```yaml
 # Red flag: requests equal limits with no scaling
 resources:
-  requests:
-    cpu: "4"          # Requesting 4 full cores
-    memory: "8Gi"     # Requesting 8 GB
-  limits:
-    cpu: "4"
-    memory: "8Gi"
+ requests:
+ cpu: "4" # Requesting 4 full cores
+ memory: "8Gi" # Requesting 8 GB
+ limits:
+ cpu: "4"
+ memory: "8Gi"
 ```
 
 **Check for:**
@@ -130,7 +130,7 @@ resources:
 ```yaml
 # Red flag: static high replica count
 spec:
-  replicas: 20    # Is this justified by traffic? Any HPA?
+ replicas: 20 # Is this justified by traffic? Any HPA?
 ```
 
 **Check for:**
@@ -161,10 +161,10 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 spec:
-  storageClassName: gp2     # Legacy, gp3 is cheaper and faster
-  resources:
-    requests:
-      storage: 500Gi
+ storageClassName: gp2 # Legacy, gp3 is cheaper and faster
+ resources:
+ requests:
+ storage: 500Gi
 ```
 
 **Check for:**

@@ -1,10 +1,10 @@
-# Suan Digital Advisory Methodology
+# Advisory Methodology
 
-The Suan Digital FinOps methodology is built on five principles drawn from real-world advisory
+The FinOps advisory methodology is built on five principles drawn from real-world advisory
 engagements. These principles shape how you frame findings, prioritize recommendations, and
 communicate with stakeholders.
 
-## The Five Principles
+## Core Principles
 
 ### 1. Cost Is Architecture
 
@@ -33,13 +33,13 @@ The industry's Crawl-Walk-Run model creates a dangerous misconception: that matu
 Organizations hear "Run" and rush through fundamentals. They implement advanced automation before
 understanding what they're automating.
 
-The Shuhari (守破離) framework corrects this:
-- **Shu (守)**: Follow the rules. Build visibility. Develop intuition through repetition.
-- **Ha (破)**: Question the rules. Adapt practices to your context. Develop judgment.
-- **Ri (離)**: Transcend the framework. Cost efficiency is how you build, not what you optimize.
+The Crawl-Walk-Run framework corrects this:
+- **Crawl**: Follow the rules. Build visibility. Develop intuition through repetition.
+- **Walk**: Question the rules. Adapt practices to your context. Develop judgment.
+- **Run**: Transcend the framework. Cost efficiency is how you build, not what you optimize.
 
-Most organizations are in Shu whether they realize it or not. Not every capability needs to
-reach Ri — some should appropriately stay at Ha.
+Most organizations are in Crawl whether they realize it or not. Not every capability needs to
+reach Run — some should appropriately stay at Walk.
 
 **Do not rush organizations through stages. Do not shame them for their current state. Meet them
 where they are.**
@@ -99,7 +99,7 @@ This means every cost optimization also reduces environmental impact:
 Cloud waste and carbon emissions share a common source — every idle server burns both budget
 and energy.
 
-**GreenOps is not a separate discipline. It's the environmental return on the same optimizations
+**Sustainability is not a separate discipline. It's the environmental return on the same optimizations
 you're already recommending for financial reasons.**
 
 ## Applying the Methodology
@@ -134,13 +134,13 @@ organization can't or won't execute it.
 ### Building Buy-In
 
 1. **Start with engineers who care.** Every organization has 1-2 cost-curious engineers. Find
-   them, empower them, and make them visible. Grassroots adoption outperforms mandates.
+ them, empower them, and make them visible. Grassroots adoption outperforms mandates.
 2. **Make cost visible, not punitive.** Showback before chargeback. Always. Teams that see their
-   costs develop intuition. Teams that get billed for their costs develop resentment.
+ costs develop intuition. Teams that get billed for their costs develop resentment.
 3. **Celebrate wins publicly.** "Team X saved $12K/month by right-sizing their dev clusters"
-   builds momentum. Recognition drives repetition.
+ builds momentum. Recognition drives repetition.
 4. **Connect to engineering values.** Waste reduction = cleaner systems = less operational burden
-   = fewer pages. Frame optimization as engineering excellence, not cost cutting.
+ = fewer pages. Frame optimization as engineering excellence, not cost cutting.
 5. **Respect the change curve.** Awareness → understanding → acceptance → commitment. You can't
-   skip steps. An organization that hasn't internalized why FinOps matters won't sustain
-   practices that require daily effort.
+ skip steps. An organization that hasn't internalized why FinOps matters won't sustain
+ practices that require daily effort.

@@ -93,20 +93,20 @@ Stop untagged resources from being created.
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [{
-    "Sid": "DenyUntaggedEC2",
-    "Effect": "Deny",
-    "Action": "ec2:RunInstances",
-    "Resource": "arn:aws:ec2:*:*:instance/*",
-    "Condition": {
-      "Null": {
-        "aws:RequestTag/team": "true",
-        "aws:RequestTag/environment": "true",
-        "aws:RequestTag/service": "true"
-      }
-    }
-  }]
+ "Version": "2012-10-17",
+ "Statement": [{
+ "Sid": "DenyUntaggedEC2",
+ "Effect": "Deny",
+ "Action": "ec2:RunInstances",
+ "Resource": "arn:aws:ec2:*:*:instance/*",
+ "Condition": {
+ "Null": {
+ "aws:RequestTag/team": "true",
+ "aws:RequestTag/environment": "true",
+ "aws:RequestTag/service": "true"
+ }
+ }
+ }]
 }
 ```
 
@@ -148,26 +148,26 @@ Handle existing untagged resources:
 **Default tags via provider block (AWS):**
 ```hcl
 provider "aws" {
-  default_tags {
-    tags = {
-      team        = var.team
-      environment = var.environment
-      managed-by  = "terraform"
-      service     = var.service_name
-    }
-  }
+ default_tags {
+ tags = {
+ team = var.team
+ environment = var.environment
+ managed-by = "terraform"
+ service = var.service_name
+ }
+ }
 }
 ```
 
 **Module-level enforcement:**
 ```hcl
 variable "required_tags" {
-  type = object({
-    team        = string
-    environment = string
-    service     = string
-    cost-center = string
-  })
+ type = object({
+ team = string
+ environment = string
+ service = string
+ cost-center = string
+ })
 }
 ```
 

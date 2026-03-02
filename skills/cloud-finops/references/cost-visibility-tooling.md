@@ -65,7 +65,7 @@ Every cloud provider includes cost management tools. Start here before adding th
 ### Open-Source FinOps Tools
 
 Free and community-maintained tools for cost visibility — especially valuable for organizations
-at Foundation (Shu) maturity or with limited tooling budgets.
+at Foundation (Crawl) maturity or with limited tooling budgets.
 
 | Tool | Focus | License | Strengths |
 |---|---|---|---|
@@ -138,21 +138,21 @@ The FinOps Open Cost & Usage Specification (FOCUS) normalizes cost data across p
 
 ### Maturity-Appropriate Tooling
 
-**Shu (Foundation):**
+**Crawl (Foundation):**
 - Native cloud cost tools (free, already available)
 - OpenCost for Kubernetes cost allocation (free, low setup effort)
 - Basic alerting (budget thresholds, anomaly detection)
 - Manual cost review cadence (weekly)
 - Tag coverage reporting
 
-**Ha (Automation):**
+**Walk (Automation):**
 - Add Infracost for PR-time visibility
 - Add Kubecost if running Kubernetes
 - Implement automated anomaly alerting
 - Build cost dashboards per team (Grafana, native tools, or third-party)
 - Consider FOCUS adoption for multi-cloud
 
-**Ri (Embedded):**
+**Run (Embedded):**
 - AI-powered cost querying (MCP servers)
 - Automated optimization execution
 - Self-service cost analytics for all engineers
@@ -215,12 +215,12 @@ cost anomalies should be treated like production incidents.
 ```
 Single cloud or multi-cloud?
 ├── Single cloud:
-│   ├── Spend <$100K/month → Native tools + Infracost + OpenCost (if K8s)
-│   └── Spend >$100K/month → Native tools + Infracost + consider third-party
+│ ├── Spend <$100K/month → Native tools + Infracost + OpenCost (if K8s)
+│ └── Spend >$100K/month → Native tools + Infracost + consider third-party
 └── Multi-cloud:
-    ├── Kubernetes-heavy → OpenCost or Kubecost + Vantage or CloudHealth
-    ├── AI-heavy → CloudZero or custom + Infracost
-    └── Enterprise governance → CloudHealth or Apptio + Infracost
+ ├── Kubernetes-heavy → OpenCost or Kubecost + Vantage or CloudHealth
+ ├── AI-heavy → CloudZero or custom + Infracost
+ └── Enterprise governance → CloudHealth or Apptio + Infracost
 
 All paths: Add FOCUS normalization when ready.
 ```

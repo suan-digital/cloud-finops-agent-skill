@@ -105,18 +105,18 @@ Most organizations use multiple AI platforms (see Pattern 3 above). No single pr
 shows total AI spend. The practical fix:
 
 1. **Normalize the unit.** Track cost-per-1K-tokens across all providers in a single currency.
-   Provider pricing pages define the rates — build a lookup table and apply it to logged usage.
+ Provider pricing pages define the rates — build a lookup table and apply it to logged usage.
 
 2. **Log at the request level.** Every API call should capture: provider, model, input tokens,
-   output tokens, latency, estimated cost, and a business tag (feature, team, or customer).
+ output tokens, latency, estimated cost, and a business tag (feature, team, or customer).
 
 3. **Centralize in one view.** Aggregate provider billing exports and request-level logs into
-   a single dashboard — Datadog, Grafana, or a data warehouse query. The observability platforms
-   now offer native integrations for OpenAI, Anthropic, and cloud AI services.
+ a single dashboard — Datadog, Grafana, or a data warehouse query. The observability platforms
+ now offer native integrations for OpenAI, Anthropic, and cloud AI services.
 
 4. **Compare model economics.** Same task across different models reveals where you're
-   overspending. The "cheap" model at high volume often exceeds the "expensive" model used
-   sparingly.
+ overspending. The "cheap" model at high volume often exceeds the "expensive" model used
+ sparingly.
 
 **What cross-platform tracking reveals:**
 - Which models actually drive the most spend (often surprising)
@@ -169,11 +169,11 @@ shows total AI spend. The practical fix:
 Companies figuring out AI costs early share three practices:
 
 1. **They measure before they scale.** Six months of pilot data reveals usage patterns and
-   real cost drivers. The jump from pilot to production is where budgets break.
+ real cost drivers. The jump from pilot to production is where budgets break.
 
 2. **They track business metrics, not just infrastructure.** Cost per customer interaction.
-   Cost per generated report. Cost per API call that actually drove revenue.
+ Cost per generated report. Cost per API call that actually drove revenue.
 
 3. **They treat AI costs as a distinct category.** Standard cloud FinOps doesn't work for AI.
-   The cost drivers are different (tokens, model selection, data patterns). The optimization
-   levers are different (prompt engineering, caching, model routing).
+ The cost drivers are different (tokens, model selection, data patterns). The optimization
+ levers are different (prompt engineering, caching, model routing).

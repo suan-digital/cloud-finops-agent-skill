@@ -78,9 +78,9 @@ forecasted to exceed.
 
 | Maturity | Approach |
 |---|---|
-| **Shu** | Start with Compute SP for 60-70% of stable baseline |
-| **Ha** | Layer: EC2 Instance SP for known workloads + Compute SP for flexible coverage |
-| **Ri** | Dynamic portfolio: Instance SP (deep discount) + Compute SP (flex) + on-demand (peaks) |
+| **Crawl** | Start with Compute SP for 60-70% of stable baseline |
+| **Walk** | Layer: EC2 Instance SP for known workloads + Compute SP for flexible coverage |
+| **Run** | Dynamic portfolio: Instance SP (deep discount) + Compute SP (flex) + on-demand (peaks) |
 
 ### Reserved Instances
 
@@ -113,13 +113,13 @@ Legacy but still useful for specific services (RDS, ElastiCache, OpenSearch, Red
 2. **Commit to 70-80% of baseline** — leave headroom for optimization and workload changes
 3. **Review monthly** — adjust as baseline shifts from new services, migrations, or optimizations
 4. **Never commit to 100%** — waste from over-commitment is more expensive than the on-demand
-   premium you're trying to avoid
+ premium you're trying to avoid
 5. **Stagger expirations** — don't let all commitments expire in the same month. Spread across
-   quarters for flexibility
+ quarters for flexibility
 
 #### Common Mistakes
 
-- Buying commitments before understanding usage patterns (Shu anti-pattern)
+- Buying commitments before understanding usage patterns (Crawl anti-pattern)
 - Committing to 100% of current spend, then optimizing — commitments become waste
 - Ignoring convertible options when architecture is evolving
 - Treating RI/SP purchases as "set and forget" — utilization degrades without monitoring
@@ -222,16 +222,16 @@ Data transfer is the most commonly overlooked AWS cost driver at scale. It rarel
 architecture reviews but compounds silently.
 
 - **Cross-AZ microservice traffic:** $0.01/GB each way. A service making 1M requests/day with
-  5KB payloads across AZs costs ~$300/month for that single service pair. Multiply across a
-  microservice mesh and this becomes material.
+ 5KB payloads across AZs costs ~$300/month for that single service pair. Multiply across a
+ microservice mesh and this becomes material.
 - **NAT Gateway data processing:** $0.045/GB on top of hourly charges. For S3 and DynamoDB
-  traffic, Gateway VPC endpoints eliminate this entirely at no hourly cost.
+ traffic, Gateway VPC endpoints eliminate this entirely at no hourly cost.
 - **CloudFront to ALB origin:** Charged at standard data transfer rates. CloudFront to S3 origin
-  is free — architecture matters for distribution patterns.
+ is free — architecture matters for distribution patterns.
 - **Cross-region replication:** Necessary for DR, expensive if unmanaged. Audit what's being
-  replicated — often includes dev/staging data that doesn't need DR.
+ replicated — often includes dev/staging data that doesn't need DR.
 - **ECR image pulls across regions:** Each pull across regions pays data transfer. Use regional
-  ECR replicas for multi-region deployments.
+ ECR replicas for multi-region deployments.
 
 #### Data Transfer Audit Checklist
 

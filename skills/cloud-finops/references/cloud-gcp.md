@@ -139,7 +139,7 @@ SELECT * FROM `project.dataset.large_table`
 SELECT user_id, event_type, revenue
 FROM `project.dataset.large_table`
 WHERE DATE(timestamp) BETWEEN '2026-01-01' AND '2026-01-31'
-  AND country = 'US'
+ AND country = 'US'
 ```
 
 ### Cloud Storage
@@ -199,13 +199,13 @@ WHERE DATE(timestamp) BETWEEN '2026-01-01' AND '2026-01-31'
 ```
 Organization
 ├── Folder: Production
-│   ├── Project: prod-api
-│   └── Project: prod-data
+│ ├── Project: prod-api
+│ └── Project: prod-data
 ├── Folder: Non-Production
-│   ├── Project: dev-api
-│   └── Project: staging-api
+│ ├── Project: dev-api
+│ └── Project: staging-api
 └── Folder: Sandbox
-    └── Project: sandbox-experiments
+ └── Project: sandbox-experiments
 ```
 
 **Best practice:** One project per service per environment. Apply billing budgets per project.

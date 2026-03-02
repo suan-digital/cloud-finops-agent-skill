@@ -24,11 +24,11 @@ strategy wrong means either overpaying for idle GPUs or failing to serve product
 ```
 Is the workload latency-sensitive?
 ├── Yes: Is traffic predictable?
-│   ├── Yes (steady): Provisioned throughput or reserved
-│   └── No (bursty): On-demand with auto-scaling + provisioned base
+│ ├── Yes (steady): Provisioned throughput or reserved
+│ └── No (bursty): On-demand with auto-scaling + provisioned base
 └── No: Can it tolerate interruption?
-    ├── Yes: Spot/preemptible instances
-    └── No: On-demand for flexibility
+ ├── Yes: Spot/preemptible instances
+ └── No: On-demand for flexibility
 ```
 
 ## The Spillover Problem

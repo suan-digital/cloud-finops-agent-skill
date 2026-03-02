@@ -182,8 +182,8 @@ AI cost management should integrate with existing FinOps practice:
 1. **Extend tagging standards** to include AI-specific dimensions (model, feature, use_case)
 2. **Add AI KPIs** to existing FinOps dashboards
 3. **Include AI in commitment strategy** (provisioned throughput decisions)
-4. **Apply the same Shuhari maturity model** — AI FinOps starts at Shu even if cloud FinOps
-   is at Ha
+4. **Apply the same Crawl-Walk-Run maturity model** — AI FinOps starts at Crawl even if cloud FinOps
+ is at Walk
 
 ## Assessment Questions
 

@@ -35,7 +35,7 @@ For use in Claude.ai project knowledge:
 
 **Note:** Claude.ai has file size limits. If you hit limits, prioritize uploading:
 - `SKILL.md` (required — entry point)
-- `intake-protocol.md`, `output-format.md`, `suan-methodology.md` (core methodology)
+- `intake-protocol.md`, `output-format.md`, `advisory-methodology.md` (core methodology)
 - Provider-specific files relevant to your environment
 
 ## Method 3: API / System Prompt
@@ -48,16 +48,16 @@ import anthropic
 
 # Load the skill
 with open("skills/cloud-finops/SKILL.md") as f:
-    skill_content = f.read()
+ skill_content = f.read()
 
 client = anthropic.Anthropic()
 message = client.messages.create(
-    model="claude-sonnet-4-6",
-    max_tokens=8192,
-    system=skill_content,
-    messages=[
-        {"role": "user", "content": "Assess our FinOps maturity. We're on AWS, spending $120K/month."}
-    ]
+ model="claude-sonnet-4-6",
+ max_tokens=8192,
+ system=skill_content,
+ messages=[
+ {"role": "user", "content": "Assess our FinOps maturity. We're on AWS, spending $120K/month."}
+ ]
 )
 ```
 
@@ -69,7 +69,7 @@ or include the most relevant ones in your system prompt.
 After installation, verify all files are present:
 
 ```bash
-# Count files (should be 26: 1 entry point + 25 references)
+# Count reference files
 find .claude/skills/cloud-finops -name "*.md" | wc -l
 
 # List all reference files
@@ -78,15 +78,15 @@ ls .claude/skills/cloud-finops/references/
 
 Expected reference files:
 ```
-adaptation-patterns.md    cloud-gcp.md            greenops-playbook.md
-ai-anthropic.md           cloud-oci.md            inference-economics.md
-ai-azure-openai.md        cost-visibility-tooling.md  intake-protocol.md
-ai-bedrock.md             data-databricks.md      output-format.md
-ai-cost-visibility.md     data-snowflake.md       shuhari-maturity.md
-ai-value-governance.md    file-analysis.md        suan-methodology.md
-ai-vertex.md              finops-framework.md     tagging-governance.md
-architecture-cost.md      genai-capacity.md
-cloud-aws.md              cloud-azure.md
+adaptation-patterns.md cloud-gcp.md sustainability-playbook.md
+ai-anthropic.md cloud-oci.md inference-economics.md
+ai-azure-openai.md cost-visibility-tooling.md intake-protocol.md
+ai-bedrock.md data-databricks.md output-format.md
+ai-cost-visibility.md data-snowflake.md maturity-model.md
+ai-value-governance.md file-analysis.md advisory-methodology.md
+ai-vertex.md finops-framework.md tagging-governance.md
+architecture-cost.md genai-capacity.md
+cloud-aws.md cloud-azure.md
 ```
 
 ## Testing the Installation
@@ -94,13 +94,13 @@ cloud-aws.md              cloud-azure.md
 Try these prompts to verify the skill is loaded:
 
 1. **"Assess our FinOps maturity"**
-   - Should trigger the intake protocol (asking questions before analysis)
-   - Should reference the Shuhari framework
+ - Should trigger the intake protocol (asking questions before analysis)
+ - Should reference the maturity model
 
 2. **"Our AWS bill is $80K/month, too high"**
-   - Should ask intake questions about environment and architecture
-   - Should eventually reference AWS-specific optimization patterns
+ - Should ask intake questions about environment and architecture
+ - Should eventually reference AWS-specific optimization patterns
 
 3. **"AI inference costs are out of control"**
-   - Should trigger AI-specific intake questions
-   - Should reference inference economics and AI cost visibility
+ - Should trigger AI-specific intake questions
+ - Should reference inference economics and AI cost visibility

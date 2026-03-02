@@ -1,25 +1,19 @@
-# Shuhari (守破離) Maturity Model
+# FinOps Maturity Model
 
-The FinOps Foundation's Crawl-Walk-Run model is useful shorthand but creates a dangerous
-misconception: that maturity is a race to the finish line. Organizations hear "Run" and rush
-through fundamentals, implementing advanced automation before understanding what they're
-automating.
-
-Shuhari offers a deeper lens — one where each stage serves a purpose, mastery requires patience,
-and "transcendence" means something different from "moving fast."
+The FinOps Foundation's Crawl-Walk-Run model is useful shorthand, but organizations often
+treat it as a race — rushing to "Run" before the fundamentals are solid. Each stage serves a
+purpose. Maturity requires patience, and "Run" means something deeper than "doing more."
 
 ## The Three Stages
 
-### Shu (守) — Protect / Follow the Rules
+### Crawl — Build the Foundation
 
-**Duration:** 6-12 months typical. Some need longer. That's not failure.
+**Duration:** 6-12 months typical. Some organizations need longer. That's not failure.
 
-In martial arts, Shu is about repetition until basics become muscle memory. You don't question.
-You don't innovate. You copy your teacher's movements exactly until they become yours.
+Crawl is about repetition until basics become second nature. You don't skip steps. You don't
+innovate yet. You build the habits and visibility that everything else depends on.
 
-In FinOps, Shu is building the foundation everything else depends on.
-
-#### What Shu Looks Like
+#### What Crawl Looks Like
 
 - Implement cost visibility across all cloud accounts
 - Establish tagging standards and enforce consistently (target: 80%+ coverage)
@@ -28,18 +22,18 @@ In FinOps, Shu is building the foundation everything else depends on.
 - Learn one provider's pricing model deeply before adding complexity
 - Develop intuition through observing cost patterns daily/weekly
 
-#### The Shu Mistake
+#### The Crawl Mistake
 
 Organizations treat visibility as a checkbox. "We have a dashboard, let's move on."
 
-Shu isn't about having a dashboard. It's about developing intuition. When you've spent months
+Crawl isn't about having a dashboard. It's about developing intuition. When you've spent months
 watching cost patterns, you start recognizing anomalies before alerts fire. You understand which
 services drive spend. You know which teams respond to cost data and which ignore it.
 
 This intuition can't be automated. It can't be purchased from a vendor. It comes from
 repetition, observation, and patience.
 
-#### Readiness to Leave Shu
+#### Readiness to Leave Crawl
 
 All of these must be true:
 
@@ -50,7 +44,7 @@ All of these must be true:
 - [ ] You understand unit economics for primary workloads
 - [ ] Cost conversations happen regularly, not just at billing surprises
 
-#### Shu Anti-Patterns
+#### Crawl Anti-Patterns
 
 - Buying advanced tooling before understanding what to measure
 - Implementing chargeback before teams understand their spend
@@ -58,17 +52,17 @@ All of these must be true:
 - Benchmarking against organizations at different stages
 - Declaring victory because a dashboard exists
 
-### Ha (破) — Break / Question the Rules
+### Walk — Adapt and Develop Judgment
 
 **Duration:** 12-24 months typical. Organizations that rush through return to relearn.
 
-In martial arts, Ha is when students start questioning why techniques work. They study other
-styles. They experiment. They adapt movements to their own circumstances.
+Walk is when you start questioning why practices work. You study other approaches. You
+experiment. You adapt methods to your own circumstances.
 
-In FinOps, Ha means deliberately breaking rules that served you in Shu, because you now
-understand why those rules existed.
+In FinOps, Walk means deliberately evolving beyond the rigid rules that served you in Crawl,
+because you now understand why those rules existed.
 
-#### What Ha Looks Like
+#### What Walk Looks Like
 
 - Automate repetitive optimizations
 - Build chargeback models that create real accountability
@@ -80,29 +74,29 @@ understand why those rules existed.
 
 #### The Key Shift
 
-In Shu, you tagged resources because the policy said to. In Ha, you understand that tagging
-enables allocation → allocation enables accountability → accountability changes behavior. Now
+In Crawl, you tagged resources because the policy said to. In Walk, you understand that tagging
+enables allocation > allocation enables accountability > accountability changes behavior. Now
 you make intelligent decisions about when tagging matters and when it doesn't.
 
-In Shu, you right-sized instances because a tool recommended it. In Ha, you understand the
+In Crawl, you right-sized instances because a tool recommended it. In Walk, you understand the
 relationship between utilization, performance, and cost, and can have nuanced conversations
 with engineering about acceptable trade-offs.
 
-#### The Ha Danger
+#### The Walk Danger
 
-Many organizations get stuck here. They've broken from rigid rules but replaced them with new
+Many organizations get stuck here. They've moved beyond rigid rules but replaced them with new
 rigid rules from a different source.
 
 They read that Company X achieved 40% savings with a particular approach, so they copy it
 exactly. They attend a conference and implement whatever the speaker recommended. They hire a
 consultant and follow the playbook without adaptation.
 
-That's not Ha. That's Shu with a different master.
+That's not Walk. That's Crawl with a different teacher.
 
-True Ha means developing judgment — understanding principles deeply enough to know when best
+True Walk means developing judgment — understanding principles deeply enough to know when best
 practices don't apply to your situation.
 
-#### Readiness to Leave Ha
+#### Readiness to Leave Walk
 
 All of these must be true:
 
@@ -113,7 +107,7 @@ All of these must be true:
 - [ ] Engineering and finance speak the same language about cloud economics
 - [ ] Cost optimization suggestions come from engineering teams, not just FinOps
 
-#### Ha Anti-Patterns
+#### Walk Anti-Patterns
 
 - Copying another organization's FinOps playbook exactly
 - Automating without understanding what you're automating
@@ -121,16 +115,16 @@ All of these must be true:
 - Over-investing in tooling while under-investing in organizational change
 - Confusing tool sophistication with organizational maturity
 
-### Ri (離) — Transcend / Create Your Own Path
+### Run — Internalize and Transcend
 
 **Duration:** Rare. Not the goal for every capability.
 
-In martial arts, Ri is mastery. The practitioner moves in ways their original teachers never
-taught, yet every movement reflects deep understanding of fundamentals.
+Run is mastery. The organization operates in ways no playbook prescribed, yet every decision
+reflects deep understanding of fundamentals.
 
-In FinOps, Ri means the framework is no longer needed because the principles are internalized.
+In FinOps, Run means the framework is no longer needed because the principles are internalized.
 
-#### What Ri Looks Like
+#### What Run Looks Like
 
 - Cost optimization is embedded in how the organization builds, not applied after
 - Teams self-govern without central enforcement
@@ -138,9 +132,9 @@ In FinOps, Ri means the framework is no longer needed because the principles are
 - The distinction between "FinOps" and "how we build things" disappears
 - The organization creates approaches others study
 
-#### Ri in Practice
+#### Run in Practice
 
-What does Ri actually look like day-to-day?
+What does Run actually look like day-to-day?
 
 - **Cost efficiency is embedded in sprint planning, not separate reviews.** Engineers estimate
   cost impact alongside story points. "How much will this cost to run?" is as natural a question
@@ -156,18 +150,18 @@ What does Ri actually look like day-to-day?
 - **Cost anomalies are investigated like production incidents.** Not because policy demands it,
   but because the team instinctively treats unexpected cost as a signal that something is wrong.
 
-#### The Paradox of Ri
+#### The Paradox of Run
 
-You can't aim for Ri directly. You can't skip Shu and Ha to get there faster. Ri emerges from
-fully experiencing the previous stages.
+You can't aim for Run directly. You can't skip Crawl and Walk to get there faster. Run emerges
+from fully experiencing the previous stages.
 
-Organizations that claim "Run" maturity often reveal, under scrutiny, that they're performing
-Ha activities with Ri vocabulary. Sophisticated tooling but shallow understanding. Automated
+Organizations that claim Run maturity often reveal, under scrutiny, that they're performing
+Walk activities with Run vocabulary. Sophisticated tooling but shallow understanding. Automated
 processes they don't fully grasp.
 
-True Ri is rare. And that's fine.
+True Run is rare. And that's fine.
 
-#### Ri Indicators
+#### Run Indicators
 
 - Cost efficiency is simply part of how the organization operates, like security or reliability
 - No one talks about "FinOps maturity" anymore — it's assumed
@@ -175,23 +169,23 @@ True Ri is rare. And that's fine.
 - The organization generates novel approaches that others adopt
 - FinOps practitioners move to other roles because the practice sustains itself
 
-#### Ri Anti-Patterns
+#### Run Anti-Patterns
 
-Not everything that looks like Ri is Ri. Watch for:
+Not everything that looks like Run is Run. Watch for:
 
-- **Declaring Ri because leadership stopped asking about costs.** They may have given up, not
+- **Declaring Run because leadership stopped asking about costs.** They may have given up, not
   transcended. If cost conversations disappeared because nobody cares — that's regression, not
   mastery.
 - **Sophisticated automation that nobody understands.** If the team can't explain what their
   cost automation does or why, they've built fragile complexity, not internalized practice.
-  Ri means understanding is deep, not that tooling is complex.
-- **"We don't need FinOps" as avoidance, not mastery.** True Ri organizations don't need the
+  Run means understanding is deep, not that tooling is complex.
+- **"We don't need FinOps" as avoidance, not mastery.** True Run organizations don't need the
   framework because they've internalized its principles. Organizations in denial don't need
   the framework because they've never engaged with it. The outputs look identical on the
   surface but the underlying reality is opposite.
-- **Optimizing everything to the floor.** Ri includes the wisdom to know when cost isn't the
-  right constraint. Over-optimization that sacrifices velocity or reliability is Ha behavior —
-  applying rules rigidly — not Ri.
+- **Optimizing everything to the floor.** Run includes the wisdom to know when cost isn't the
+  right constraint. Over-optimization that sacrifices velocity or reliability is Walk behavior —
+  applying rules rigidly — not Run.
 
 ## Assessment Framework
 
@@ -200,7 +194,7 @@ Not everything that looks like Ri is Ri. Watch for:
 Map the organization against three dimensions:
 
 **1. Overall Stage:**
-- Where does the organization primarily operate? (Shu / early Ha / mid Ha / late Ha / Ri)
+- Where does the organization primarily operate? (Crawl / early Walk / mid Walk / late Walk / Run)
 - What's the evidence? (List 3-5 supporting observations)
 
 **2. Capability Variation:**
@@ -208,10 +202,10 @@ Not all capabilities are at the same stage. Map key capabilities:
 
 | Capability | Stage | Evidence |
 |---|---|---|
-| Cost visibility | Ha | Dashboards automated, teams review weekly |
-| Tagging governance | Shu | Standards exist but only 60% coverage |
-| Commitment strategy | Ha | SP portfolio managed, 85% utilization |
-| CI/CD cost integration | Shu | No cost gates in pipeline |
+| Cost visibility | Walk | Dashboards automated, teams review weekly |
+| Tagging governance | Crawl | Standards exist but only 60% coverage |
+| Commitment strategy | Walk | SP portfolio managed, 85% utilization |
+| CI/CD cost integration | Crawl | No cost gates in pipeline |
 | Unit economics | Not started | No cost-per-user tracking |
 
 **3. Advancement Readiness:**
@@ -223,7 +217,7 @@ Not all capabilities are at the same stage. Map key capabilities:
 
 Rate each area 1-5 and sum for overall positioning:
 
-| Area | 1 (Shu) | 3 (Ha) | 5 (Ri) |
+| Area | 1 (Crawl) | 3 (Walk) | 5 (Run) |
 |---|---|---|---|
 | Cost visibility | Manual exports | Automated dashboards | Self-service, real-time |
 | Accountability | Central team only | Showback to teams | Teams self-govern |
@@ -231,43 +225,31 @@ Rate each area 1-5 and sum for overall positioning:
 | Architecture | Cost as afterthought | Cost in reviews | Cost as design constraint |
 | Culture | "Finance's problem" | Shared responsibility | Engineering-owned |
 
-**Total: 5-10 = Shu, 11-18 = Ha, 19-25 = Ri**
+**Total: 5-10 = Crawl, 11-18 = Walk, 19-25 = Run**
 
 Use this as a conversation starter, not a definitive assessment. The qualitative evidence from
 the stage descriptions above matters more than the number. An organization scoring 14 might be
-solidly in Ha — or might be a Shu organization that overrates itself. Validate scores against
+solidly in Walk — or might be a Crawl organization that overrates itself. Validate scores against
 the stage-exit criteria.
 
-Most organizations are in Shu whether they realize it or not. Only a small percentage have
-genuinely reached Ha. Ri organizations are exceptional.
-
-## Mapping to FinOps Foundation Crawl-Walk-Run
-
-| Shuhari | Foundation | Key Difference |
-|---|---|---|
-| Shu | Crawl | Shu emphasizes patience and intuition, not just "getting started" |
-| Ha | Walk | Ha emphasizes judgment and adaptation, not just "doing more" |
-| Ri | Run | Ri emphasizes transcendence — framework becomes invisible, not "optimized" |
-
-The Foundation explicitly states "Run" isn't the goal for every capability. Shuhari adds: even
-within "Run," there are depths. A lifetime of martial arts practice still leaves room for
-growth.
+Most organizations are in Crawl whether they realize it or not. Only a small percentage have
+genuinely reached Walk. Run organizations are exceptional.
 
 ## Communication Guidelines
 
-**For organizations in Shu:**
-- Validate their starting point — Shu is where everyone begins
+**For organizations in Crawl:**
+- Validate their starting point — Crawl is where everyone begins
 - Emphasize patience — rushing creates gaps that haunt later stages
 - Focus on observable, quick-win improvements that build confidence
 - Don't overwhelm with advanced concepts they're not ready for
 
-**For organizations in Ha:**
-- Challenge their assumptions — are they truly in Ha or Shu with different masters?
+**For organizations in Walk:**
+- Challenge their assumptions — are they truly in Walk or Crawl with different teachers?
 - Encourage experimentation and adaptation over copying
 - Push for judgment over rules
-- Surface where capabilities are still in Shu despite overall Ha positioning
+- Surface where capabilities are still in Crawl despite overall Walk positioning
 
-**For organizations approaching Ri:**
+**For organizations approaching Run:**
 - Stop benchmarking against frameworks
 - Focus on what's unique about their approach
 - Explore where depth remains even in "mastered" areas

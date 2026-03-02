@@ -140,7 +140,7 @@ Monthly cost will increase by $776/month
 $427/month → $1,203/month
 
 + aws_instance.api
-  +$776/month (m5.xlarge → m5.4xlarge)
+ +$776/month (m5.xlarge → m5.4xlarge)
 ```
 
 Shift-left cost tools are gaining adoption rapidly — the curve mirrors security scanning
@@ -212,16 +212,16 @@ Not every cost is worth reducing. Optimization has costs of its own.
 ### Don't Optimize When:
 
 - **Velocity matters more than efficiency.** A startup burning $5K/month extra to ship 2 weeks
-  faster is making the right trade-off. Time-to-market has a cost too — it's just harder to
-  measure than a cloud bill.
+ faster is making the right trade-off. Time-to-market has a cost too — it's just harder to
+ measure than a cloud bill.
 - **The optimization requires architectural changes during a freeze.** Stability has value.
-  If the team is in a critical launch window or incident recovery, the disruption risk outweighs
-  the savings.
+ If the team is in a critical launch window or incident recovery, the disruption risk outweighs
+ the savings.
 - **Savings are under the effort threshold.** $200/month savings requiring 2 weeks of engineering
-  is a bad trade unless it's also reducing operational complexity. Engineering time has a cost —
-  often $80-150/hour loaded.
+ is a bad trade unless it's also reducing operational complexity. Engineering time has a cost —
+ often $80-150/hour loaded.
 - **It introduces operational risk.** Aggressive spot usage on stateful workloads saves money
-  until it doesn't. Savings Plans at 100% coverage leaves zero headroom for workload reduction.
+ until it doesn't. Savings Plans at 100% coverage leaves zero headroom for workload reduction.
 
 ### The Trade-Off Framework
 

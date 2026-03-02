@@ -6,24 +6,24 @@ financial management. This reference covers the complete framework structure.
 ## Six FinOps Principles
 
 1. **Teams need to collaborate** — Finance, technology, product, and leadership teams work
-   together in near-real time. Silos create waste.
+ together in near-real time. Silos create waste.
 
 2. **Business value drives technology decisions** — Unit economics and business value metrics
-   drive spending decisions, not just cost reduction. Cheapest isn't always best.
+ drive spending decisions, not just cost reduction. Cheapest isn't always best.
 
 3. **Everyone takes ownership for their technology usage** — Engineers, not just finance, own
-   their cloud usage and cost. Cost is a first-class efficiency metric from the start of the
-   development lifecycle. Ownership at the point of decision is essential.
+ their cloud usage and cost. Cost is a first-class efficiency metric from the start of the
+ development lifecycle. Ownership at the point of decision is essential.
 
 4. **FinOps data should be accessible, timely, and accurate** — Fast feedback enables better
-   decisions. Data must be fresh, accurate, and available to all stakeholders.
+ decisions. Data must be fresh, accurate, and available to all stakeholders.
 
 5. **FinOps should be enabled centrally** — A central FinOps function enables and evangelizes
-   best practices. It facilitates, not gatekeeps. The emphasis is on enabling the organization,
-   not driving from the center.
+ best practices. It facilitates, not gatekeeps. The emphasis is on enabling the organization,
+ not driving from the center.
 
 6. **Take advantage of the variable cost model of the cloud** — Cloud's pay-as-you-go model
-   is an opportunity, not just a billing mechanism. Design for variability and agile iteration.
+ is an opportunity, not just a billing mechanism. Design for variability and agile iteration.
 
 ## Three Phases
 
@@ -171,7 +171,7 @@ These stakeholders intersect with FinOps in specific domains:
 |---|---|
 | **ITAM (IT Asset Management)** | License optimization, SaaS rationalization, hybrid cost modeling |
 | **Security** | Compliance cost, secure-by-default architectures, audit trail |
-| **Sustainability / ESG** | Carbon-aware computing, GreenOps alignment, emissions reporting |
+| **Sustainability / ESG** | Carbon-aware computing, Sustainability alignment, emissions reporting |
 | **Data / ML Engineering** | Training cost optimization, inference economics, GPU utilization |
 | **Procurement** | Contract negotiation, commitment instruments, vendor management |
 
@@ -198,13 +198,13 @@ The most effective FinOps organizations don't rely on cost reviews and dashboard
 bake efficiency into the platform itself:
 
 - A service template that provisions a right-sized instance by default prevents over-provisioning
-  at creation time — no review needed.
+ at creation time — no review needed.
 - A CI pipeline that shows cost delta on every PR makes cost a visible design constraint —
-  no separate tooling needed.
+ no separate tooling needed.
 - A Kubernetes platform that sets resource quotas per namespace prevents unbounded growth —
-  no manual policing needed.
+ no manual policing needed.
 
-Platform engineering makes the efficient path the default path. That's Ri-level behavior
+Platform engineering makes the efficient path the default path. That's Run-level behavior
 encoded in infrastructure.
 
 ## FOCUS Specification
@@ -261,15 +261,15 @@ For each domain, determine the maturity of the highest-impact capability:
 | Optimize Usage & Cost | Rate Optimization | ? | Walk | ? |
 | Manage the Practice | Policy & Governance | ? | Walk | ? |
 
-### Mapping to Shuhari
+### Mapping to Crawl-Walk-Run
 
-| Shuhari Stage | Typical Framework Profile |
+| Crawl-Walk-Run Stage | Typical Framework Profile |
 |---|---|
-| **Shu** | Most capabilities at Crawl. 1-2 at Walk. Focus on Domain 1. |
-| **Early Ha** | Domain 1 at Walk. Domain 3 emerging. Beginning Domain 2. |
-| **Mid Ha** | Domains 1-3 at Walk. Domain 4 developing. |
-| **Late Ha** | Most at Walk, some at Run. Strong Domain 4. |
-| **Ri** | Framework assessment no longer relevant — practices are internalized. |
+| **Crawl** | Most capabilities at Crawl. 1-2 at Walk. Focus on Domain 1. |
+| **Early Walk** | Domain 1 at Walk. Domain 3 emerging. Beginning Domain 2. |
+| **Mid Walk** | Domains 1-3 at Walk. Domain 4 developing. |
+| **Late Walk** | Most at Walk, some at Run. Strong Domain 4. |
+| **Run** | Framework assessment no longer relevant — practices are internalized. |
 
 ### Key Benchmarks
 

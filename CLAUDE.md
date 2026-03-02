@@ -2,8 +2,7 @@
 
 ## Repository
 
-Cloud FinOps Agent Skill — 25 reference files providing structured FinOps domain knowledge to LLMs.
-Maintained by Suan Digital (https://suan.digital). Licensed CC BY-SA 4.0.
+Cloud FinOps Agent Skill — structured FinOps domain knowledge for LLMs.
 
 ## Git Conventions
 
@@ -23,10 +22,12 @@ Maintained by Suan Digital (https://suan.digital). Licensed CC BY-SA 4.0.
 ## File Structure
 
 All skill content lives in `skills/cloud-finops/`:
+
 - `SKILL.md` — Entry point (agentskills.io spec)
-- `references/` — 25 domain reference files
+- `references/` — domain reference files
 
 Each reference file should have:
+
 1. Title and scope description
 2. Core content with tables, patterns, actionable guidance
 3. Assessment questions for analysis

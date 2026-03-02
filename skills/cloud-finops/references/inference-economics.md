@@ -101,7 +101,7 @@ compound.
 **Optimization techniques:**
 - **Shorter system prompts:** Strip unnecessary instructions. Every token counts at scale.
 - **Structured output formats:** JSON mode or structured outputs reduce parsing failures
-  and retries.
+ and retries.
 - **Few-shot reduction:** Find the minimum examples needed. 2 examples often work as well as 5.
 - **Context pruning:** Send only relevant context, not everything available.
 - **Prompt caching:** Cache system prompts and common prefixes (provider-specific feature).

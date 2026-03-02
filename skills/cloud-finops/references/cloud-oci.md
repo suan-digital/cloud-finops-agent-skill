@@ -163,14 +163,14 @@ AWS/Azure/GCP.
 ```
 Root Compartment
 ├── Production
-│   ├── App-Services
-│   └── Data-Services
+│ ├── App-Services
+│ └── Data-Services
 ├── Non-Production
-│   ├── Development
-│   └── Staging
+│ ├── Development
+│ └── Staging
 └── Shared-Services
-    ├── Networking
-    └── Security
+ ├── Networking
+ └── Security
 ```
 
 Use compartments for cost isolation and governance. Apply budgets per compartment.

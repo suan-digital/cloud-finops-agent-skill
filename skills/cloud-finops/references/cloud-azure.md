@@ -185,11 +185,11 @@ Use management groups for governance at scale:
 ```
 Root Management Group
 ├── Production
-│   ├── Business Unit A
-│   └── Business Unit B
+│ ├── Business Unit A
+│ └── Business Unit B
 ├── Non-Production
-│   ├── Development
-│   └── Staging
+│ ├── Development
+│ └── Staging
 └── Sandbox
 ```
 

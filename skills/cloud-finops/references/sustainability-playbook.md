@@ -1,6 +1,6 @@
-# GreenOps Remediation Playbook
+# Sustainability Remediation Playbook
 
-Every cloud optimization that cuts costs also cuts carbon. GreenOps isn't a separate discipline
+Every cloud optimization that cuts costs also cuts carbon. Sustainability isn't a separate discipline
 from FinOps — it's the same remediation playbook with an additional metric: carbon.
 
 ## The 8-Fix Remediation Playbook
@@ -215,12 +215,12 @@ intensity, M = embodied carbon of hardware, R = functional unit (per request, pe
 minute). Use SCI to compare the carbon efficiency of architectural alternatives, not just
 absolute emissions.
 
-## GreenOps Assessment Questions
+## Sustainability Assessment Questions
 
 1. Is carbon tracked alongside cost? (Most organizations: no)
 2. What's the estimated waste percentage?
 3. Which of the 8 fixes have the highest potential in this environment?
-4. Are dev environments scheduled? (Quickest GreenOps win)
+4. Are dev environments scheduled? (Quickest sustainability win)
 5. Are storage lifecycle policies in place?
 6. What instance generations are in use? (Older = less efficient)
 7. Is sustainability a board-level or compliance requirement?

@@ -8,7 +8,7 @@ context.
 
 ### Startup ($5K-$50K/month)
 
-**Shuhari stage:** Likely early Shu. Building foundations.
+**Crawl-Walk-Run stage:** Likely early Crawl. Building foundations.
 
 **Focus on:**
 - Cost visibility across all accounts (often just 1-2)
@@ -34,7 +34,7 @@ context.
 
 ### Mid-Market ($50K-$500K/month)
 
-**Shuhari stage:** Likely Shu transitioning to Ha. Foundations exist, automation emerging.
+**Crawl-Walk-Run stage:** Likely Crawl transitioning to Walk. Foundations exist, automation emerging.
 
 **Focus on:**
 - Commitment strategy optimization (RIs, Savings Plans, CUDs)
@@ -60,7 +60,7 @@ context.
 
 ### Enterprise ($500K+/month)
 
-**Shuhari stage:** Varies by domain — some capabilities may be Ha while others remain Shu.
+**Crawl-Walk-Run stage:** Varies by domain — some capabilities may be Walk while others remain Crawl.
 
 **Focus on:**
 - Governance at scale (policies, guardrails, automation)
@@ -94,7 +94,7 @@ context.
 - **Skip references:** All `ai-*.md` files, `genai-capacity.md`, `ai-value-governance.md`
 - **Focus:** Cloud infrastructure optimization, traditional FinOps disciplines
 - **Note:** If the organization is planning AI adoption, provide a brief forward-looking note
-  about AI cost structures to set expectations
+ about AI cost structures to set expectations
 
 ### AI in Experimentation
 
@@ -104,7 +104,7 @@ Organizations with AI proof-of-concepts, pilots, or early experiments.
 - **Skip:** Dimension 6 (inference economics is premature before production scale)
 - **Key message:** "Measure before you scale. Six months of pilot data reveals true cost drivers."
 - **Warn:** About cost surprises before scaling — the jump from pilot to production is where
-  budgets break
+ budgets break
 - **Reference:** `ai-cost-visibility.md` only — enough to set expectations without overwhelming
 
 ### AI in Production
@@ -113,14 +113,14 @@ Organizations running LLMs or ML models in production with measurable inference 
 
 - **Full analysis:** Dimensions 5 and 6
 - **Focus areas:**
-  - Hidden cost assessment (is total AI cost tracked or just API charges?)
-  - Model routing opportunities (are all queries hitting the same model?)
-  - Prompt optimization potential
-  - Cost attribution by AI feature/workflow
-  - Caching strategy for repetitive queries
+ - Hidden cost assessment (is total AI cost tracked or just API charges?)
+ - Model routing opportunities (are all queries hitting the same model?)
+ - Prompt optimization potential
+ - Cost attribution by AI feature/workflow
+ - Caching strategy for repetitive queries
 - **References:** `ai-cost-visibility.md`, `inference-economics.md`, relevant AI provider file
 - **Key metrics to introduce:** Cost per inference, token consumption per workflow, cost per
-  AI-generated output
+ AI-generated output
 
 ### Heavy AI / Agentic Workflows
 
@@ -129,17 +129,17 @@ product capability.
 
 - **Deep dive:** Dimensions 5 and 6, plus capacity planning and governance
 - **Focus areas:**
-  - Agentic multiplier analysis (5-25x cost vs. standard LLM calls)
-  - Agent-to-agent communication cost modeling
-  - Token-level optimization strategy
-  - Multi-model routing architecture
-  - Provisioned throughput vs. on-demand decisions
-  - AI value governance (stage gates, kill criteria for AI features)
-  - GPU/TPU capacity planning
+ - Agentic multiplier analysis (5-25x cost vs. standard LLM calls)
+ - Agent-to-agent communication cost modeling
+ - Token-level optimization strategy
+ - Multi-model routing architecture
+ - Provisioned throughput vs. on-demand decisions
+ - AI value governance (stage gates, kill criteria for AI features)
+ - GPU/TPU capacity planning
 - **References:** `ai-cost-visibility.md`, `inference-economics.md`, `genai-capacity.md`,
-  `ai-value-governance.md`, relevant AI provider files
+ `ai-value-governance.md`, relevant AI provider files
 - **Key risk:** Many agentic AI projects get canceled due to cost and complexity — help the
-  organization avoid this
+ organization avoid this
 
 ## By Engagement Type
 
@@ -169,8 +169,8 @@ product capability.
 The spend tier and AI maturity patterns combine. For example:
 
 - **Enterprise + Heavy AI:** Full depth on all dimensions, emphasis on governance and
-  organizational change, AI-specific KPIs and capacity planning
+ organizational change, AI-specific KPIs and capacity planning
 - **Startup + AI in Experimentation:** Light intake, focus on visibility and quick wins,
-  brief AI cost warning, skip governance complexity
+ brief AI cost warning, skip governance complexity
 - **Mid-Market + AI in Production:** Standard depth, emphasis on model routing and cost
-  attribution, commitment strategy that accounts for AI spend variability
+ attribution, commitment strategy that accounts for AI spend variability

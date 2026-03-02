@@ -119,14 +119,14 @@ Enterprise edition feature. Scale out (more clusters) vs. scale up (bigger wareh
 ```sql
 -- Find top-cost queries (by warehouse credits consumed)
 SELECT
-  query_id,
-  warehouse_name,
-  total_elapsed_time / 1000 as seconds,
-  bytes_scanned / (1024*1024*1024) as gb_scanned,
-  credits_used_cloud_services,
-  query_text
+ query_id,
+ warehouse_name,
+ total_elapsed_time / 1000 as seconds,
+ bytes_scanned / (1024*1024*1024) as gb_scanned,
+ credits_used_cloud_services,
+ query_text
 FROM snowflake.account_usage.query_history
-WHERE start_time > DATEADD('day', -7, CURRENT_TIMESTAMP())
+WHERE start_time > DATEADD('day', -7, CURRENT_TIMESTAMP)
 ORDER BY total_elapsed_time DESC
 LIMIT 20;
 ```
@@ -173,13 +173,13 @@ Set up resource monitors for governance:
 ```sql
 -- Create resource monitor with credit quota
 CREATE RESOURCE MONITOR daily_monitor
-  WITH CREDIT_QUOTA = 100
-  FREQUENCY = DAILY
-  START_TIMESTAMP = IMMEDIATELY
-  TRIGGERS
-    ON 75 PERCENT DO NOTIFY
-    ON 90 PERCENT DO NOTIFY
-    ON 100 PERCENT DO SUSPEND;
+ WITH CREDIT_QUOTA = 100
+ FREQUENCY = DAILY
+ START_TIMESTAMP = IMMEDIATELY
+ TRIGGERS
+ ON 75 PERCENT DO NOTIFY
+ ON 90 PERCENT DO NOTIFY
+ ON 100 PERCENT DO SUSPEND;
 
 -- Assign to warehouse
 ALTER WAREHOUSE analytics_wh SET RESOURCE_MONITOR = daily_monitor;
