@@ -15,11 +15,11 @@ Works with Claude Code, Cursor, Codex, OpenCode, and [40+ other agents](https://
 This skill turns any AI agent into a FinOps advisor that:
 
 - **Asks before prescribing** — Structured intake gathers context before analysis
-- **Assesses maturity** — Crawl-Walk-Run maturity model provides depth beyond labels
-- **Routes by business problem** — "AI costs are out of control" triggers different references than "We need a commitment strategy"
-- **Applies 8 analysis dimensions** — From FinOps practice assessment to sustainability & waste remediation
-- **Outputs structured reports** — 10-section template that executives can forward to their CFO
-- **Knows provider specifics** — AWS, Azure, GCP, OCI, plus AI providers and data platforms
+- **Assesses maturity** — Crawl-Walk-Run with depth beyond labels
+- **Routes by business problem** — Not by provider — by what actually hurts
+- **Outputs structured reports** — Executive-ready, not a wall of text
+- **Covers AI costs** — The hidden multiplier most orgs miss
+- **Knows provider specifics** — AWS, Azure, GCP, OCI, AI providers, data platforms
 
 ## Sample Prompts
 
@@ -38,7 +38,7 @@ cloud-finops/
 ├── skills/
 │ └── cloud-finops/
 │ ├── SKILL.md ← Entry point (agentskills.io spec)
-│ └── references/ ← 25 domain reference files
+│ └── references/ ← Domain reference files
 ├── INSTALLATION.md
 ├── CHANGELOG.md
 ├── LICENSE.md ← CC BY-SA 4.0
