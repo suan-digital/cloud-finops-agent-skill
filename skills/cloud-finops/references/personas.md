@@ -48,7 +48,7 @@
 **Frustrations:**
 - Unpredictable, sometimes chaotic, cloud spend
 - Unable to see link between engineering initiatives and business objectives
-- Unsure of the return on their company's cloud investment
+- Unsure of the return on their company’s cloud investment
 
 **Key Metrics:**
 - Revenue Growth
@@ -100,6 +100,7 @@
 
 ## CFO
 
+
 **Objectives:**
 - Cost visibility and granularity, and accuracy
 - Overall cost-per-unit / COGS reduction
@@ -107,7 +108,7 @@
 
 **Frustrations:**
 - Unpredictable, sometimes chaotic, cloud spend
-- Unsure of the return on their company's cloud investment
+- Unsure of the return on their company’s cloud investment
 - Cost fluctuations and innovation do not align to budgeting cycles
 
 **Key Metrics:**
@@ -147,7 +148,7 @@
 **FinOps Benefits:**
 - Manage risk
 - Connect product decisions with business outcomes
-- Predict how much cloud infrastructure will factor into feature/product price
+- Predict how much cloud infrastructure will factor into feature/ product price
 - Guide team to make good cloud investments
 
 ---
@@ -157,17 +158,17 @@
 **Primary Goal:** Deliver faster and high quality services to the organisation, whilst maintaining business as usual
 
 **Objectives:**
-- Drive accountability to engineering teams that are responsible for the application/services
-- Provide guidance to engineering teams to have a cost-effective application/service by identifying anomalies and best practices
+- Drive accountability to engineering teams that are responsible for the application/services.
+- Provide guidance to engineering teams to have a cost-effective application/service by identifying anomalies and best practices.
 - Work together with engineering teams to identify rate reductions and possible cost avoidance
 - Cost allocation
 
 **Frustrations:**
-- Unsatisfied engineers as their workload keeps rising
+- Unsatisfied engineers as their workload keeps rising.
 - Long delivery cycles
 - Cannot predict the impact on the budget
 - Difficult to identify service or application ownership
-- Cannot predict the costs closely enough for developing new features and products
+- Cannot predict the costs closely enough for developing new features and products.
 
 **Key Metrics:**
 - Revenue by infrastructure costs

@@ -2,9 +2,9 @@
 
 # FinOps KPIs
 
-This project collects the outputs from conversations in the FinOps Foundation Slack #KPIs room.
+This project collects the outputs from conversations in the Slack [#KPIs room](https://finopsfoundation.slack.com/archives/CM25PLFD5).
 
-## List of Common FinOps KPIs
+## List of common FinOps KPIs
 
 - RI Coverage
 - Savings Plan Coverage
@@ -12,7 +12,7 @@ This project collects the outputs from conversations in the FinOps Foundation Sl
 - Rightsizing opportunity value
 - Usage on weekends vs weekdays
 - % of spot vs other coverage
-- Custom pricing commitment tracking
+- custom pricing commitment tracking
 - % orphaned EBS volumes
 - % orphaned snapshots
 - Aged snapshots
@@ -24,7 +24,7 @@ This project collects the outputs from conversations in the FinOps Foundation Sl
 - % EBS storage on wrong tier
 - % unattached elastic IPs
 - % wrong instance type
-- % dev resources running out of hours (running outside non-peak hours, like nights and weekends)
+- % dev resources running out of hours (this means, running out of non-peak hours, like nights and weekends
 - % untagged resources
 - % wrongly tagged resources
 - % total tag coverage
@@ -45,3 +45,5 @@ This project collects the outputs from conversations in the FinOps Foundation Sl
 
 - https://github.com/finopsfoundation/kpis
 - https://www.finops.org/framework/capabilities
+- https://finopspod.captivate.fm/episode/zach-stitham-driving-finops-culture-through-kpis
+- https://www.oreilly.com/library/view/cloud-finops/9781492054610/ch16.html
