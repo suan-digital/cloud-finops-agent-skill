@@ -18,7 +18,7 @@ This skill turns any AI agent into a FinOps advisor grounded in Foundation mater
 - **Covers the full framework** — All domains and capabilities with Crawl/Walk/Run maturity criteria, plus all personas
 - **Includes FOCUS billing spec** — Column definitions and data model for multi-cloud cost normalization
 - **Waste sensor definitions** — Standardized waste sensors from the KPIs repo for identifying savings opportunities
-- **Tracks upstream changes** — Git-based monitoring detects drift in Foundation repos, FOCUS spec releases, and KPI definitions
+- **Tracks upstream changes** — Submodule-based scripts detect drift in Foundation repos, FOCUS spec releases, and KPI definitions
 
 ## Source Repositories
 
@@ -64,11 +64,7 @@ cloud-finops/
 │   └── kpis/                                 ← finopsfoundation/kpis
 ├── scripts/
 │   ├── transform-upstream.py                 ← Reads .upstream/, writes references/
-│   ├── check-coverage.py                     ← Framework coverage validation
 │   └── check-submodule-freshness.py          ← Submodule drift detection
-├── .github/workflows/
-│   └── content-monitoring.yml                ← Weekly CI
-├── coverage-matrix.yaml                      ← Framework element → file mapping
 ├── .claude-plugin/marketplace.json           ← skills.sh marketplace config
 ├── INSTALLATION.md
 ├── CHANGELOG.md
@@ -77,13 +73,10 @@ cloud-finops/
 
 ## Content Monitoring
 
-Three scripts keep the skill aligned with upstream sources:
+Two scripts keep the skill aligned with upstream sources:
 
-- **`transform-upstream.py`** — Reads `.upstream/` submodules and writes `references/`. Use `--check` in CI to verify committed files match.
-- **`check-coverage.py`** — Validates that every Foundation framework capability maps to a reference file and verifies FOCUS spec version.
+- **`transform-upstream.py`** — Reads `.upstream/` submodules and writes `references/`. Use `--check` to verify committed files match.
 - **`check-submodule-freshness.py`** — Compares pinned submodule commits against remote HEAD to detect upstream drift.
-
-All run weekly via GitHub Actions. Drift triggers an auto-created issue.
 
 ## Contributing
 
