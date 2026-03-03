@@ -2,10 +2,6 @@
 
 # Chargeback & Finance Integration
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Chargeback and Finance Integration is about pushing spend accountability to the edges of the organization that are responsible for creating the expense.
 
@@ -15,7 +11,7 @@ Chargeback is the focus in this capability, but [Showback](https://www.finops.or
 
 A tagging and account strategy is vital as ways to identify costs.  By either assigning a tag to a resource, or by designating a cost center that pays for resources in a certain account, practitioners can identify who is accountable for the expense incurred.
 
-Another consideration in this capability is how to allocate [shared organizational costs](https://www.finops.org/framework/capabilities/manage-shared-cloud-cost/) and [commitment based discounts](https://www.finops.org/framework/capabilities/manage-commitment-based-discounts/).  Will these be held centrally or allocated based on consumption?  
+Another consideration in this capability is how to allocate [shared organizational costs](https://www.finops.org/framework/capabilities/manage-shared-cloud-cost/) and [commitment based discounts](https://www.finops.org/framework/capabilities/manage-commitment-based-discounts/).  Will these be held centrally or allocated based on consumption?
 
 It is important for a centralized FinOps team to align with their finance partners to make sure that the decisions made in this capability (chargeback vs showback, tagging and accounting strategies, how to handle shared costs) can integrate with the companies IT policies and systems.  The goal is to make it easy for users to be accountable for their expenses. The best way to do this is by integrating with the company's finance tools and processes.
 
@@ -69,7 +65,5 @@ _for example:_
 * Tagging and Account strategy are important for cost allocation.
 * Company accounting policy
 * Company cost center/department hierarchy
-
-[See finops.org for full content]
 
 ---

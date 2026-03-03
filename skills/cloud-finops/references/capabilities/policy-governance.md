@@ -2,10 +2,6 @@
 
 # Cloud Policy & Governance
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Policy and Governance can be thought of as a set of statements of intent, with associated assurances of adherence.
 
@@ -72,8 +68,6 @@ If a policy is poorly conceived or expressed, of dubious authority, too broad or
 Some examples of good policy statements might be:
 - “Our policy is to cover more than 80% of our optimised cloud usage with discounted pricing plans”
 - “Our policy is to reduce wasted spend by decommissioning cloud resources that deliver no business value”
-
-[See finops.org for full content]
 
 #### Cloud Provider Governance & Policy Resources
 

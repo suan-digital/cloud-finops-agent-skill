@@ -2,10 +2,6 @@
 
 # Forecasting
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Forecasting is the practice of predicting future spending, usually based on a combination of historical spending and an evaluation of future plans, understanding how future cloud infrastructure and application lifecycle changes may impact current budgets and influence budget planning and future cloud investment decisions.
 
@@ -105,7 +101,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Cost anomaly trends
 * Forecasting models and tooling
 * Stakeholder real-time visibility into cost and usage reporting data
-
-[See finops.org for full content]
 
 ---

@@ -2,9 +2,6 @@
 
 # FinOps Education & Enablement
 
-## Domains
-
-[See finops.org for full content]
 ## Definition
 FinOps Education & Enablement allows all those participating in FinOps practices to increase the business value of cloud by accelerating FinOps adoption.
 
@@ -53,8 +50,6 @@ _written for each persona responsible for the functional activity and processes 
 - Build your own use of Confluence, Sharepoint, etc. to create internal playbooks, wikis and other things that “work here”
 - Encourage collaboration and cross-fertilization of ideas across different functions
 - Be mindful of providing for different learning styles and needs for different individuals
-
-[See finops.org for full content]
 
 ## FinOps Training
 

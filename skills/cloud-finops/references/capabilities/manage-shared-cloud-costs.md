@@ -2,10 +2,6 @@
 
 # Managing Shared Cost
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 A foundational [Principle of FinOps](https://www.finops.org/framework/principles/) is: "Everyone takes ownership for their cloud usage".  The true key to understanding total cost of ownership is built upon transparency and accuracy, but unallocated shared costs hinders both of these. Without appropriately splitting costs that are shared, engineers and product managers lack a complete picture of how much their products are really costing.
 
@@ -77,7 +73,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Enterprise level support
 * Enterprise level discounts
 * Licensing, 3rd party SaaS costs
-
-[See finops.org for full content]
 
 ---

@@ -2,10 +2,6 @@
 
 # Data Ingestion & Normalization
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Data ingestion and normalization in the context of FinOps represents the set of functional activities involved with processing/transforming  data sets to create a queryable common repository for your cloud cost management needs. In this context, data ingestion and normalization occurs when bringing together cloud billing data, cloud usage data, cloud utilization and performance data, on-premises CMDB or ITAM data, business-specific data, and other data points from a variety of cloud providers and IT data repositories to create a collection of cost and usage information which can be queried to support and enable the [FinOps Capabilities](https://www.finops.org/framework/capabilities/).
 
@@ -78,7 +74,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Utilization data showing CPU, Memory, Disk, and/or Network utilization at a resource or resource group level
 * Transactional data from logs or systems which record the number or quantity of use of types of resources (often shared resources)
 * Value or outcome based reporting which provides data on the number of transactions or increments of value created by or represented by the operation of the systems. This information can provide the denominator for unit economics KPIs
-
-[See finops.org for full content]
 
 ---

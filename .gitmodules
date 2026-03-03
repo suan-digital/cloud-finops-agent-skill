@@ -1,0 +1,9 @@
+[submodule ".upstream/framework"]
+	path = .upstream/framework
+	url = https://github.com/finopsfoundation/framework.git
+[submodule ".upstream/focus-spec"]
+	path = .upstream/focus-spec
+	url = https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec.git
+[submodule ".upstream/kpis"]
+	path = .upstream/kpis
+	url = https://github.com/finopsfoundation/kpis.git

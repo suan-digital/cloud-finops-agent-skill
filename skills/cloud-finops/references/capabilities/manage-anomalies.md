@@ -2,10 +2,6 @@
 
 # Managing Anomalies
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Anomaly Management is the ability to detect, identify, clarify, alert and manage unexpected or unforecasted cloud cost events in a timely manner, in order to minimize detrimental impact to the business, cost or otherwise.
 
@@ -21,11 +17,11 @@ Having Anomaly Detection tools that provide this granularity of cost by service,
 
 **Triage Anomalies** is the practice of driving incoming work by priority so that the highest impacting alerts are handled first.
 
-**Resolving Anomalies** typically involves some level of investigation and then either a change to adjust the environment, or to adjust the expectation of the cost of the affected scope. Another resolution may be to simply acknowledge the anomaly. 
+**Resolving Anomalies** typically involves some level of investigation and then either a change to adjust the environment, or to adjust the expectation of the cost of the affected scope. Another resolution may be to simply acknowledge the anomaly.
 
 ### Example A
 
-Imagine a new testing infrastructure created to accommodate a testing period for a new application. If this environment has not existed before, it may be flagged as anomalous because it varies from historical spending patterns. So while automated tools will see this as anomalous, it is expected from the perspective of the humans launching the new environment, and the anomaly can be dismissed after ensuring it’s within the expected new cost of the new environment. 
+Imagine a new testing infrastructure created to accommodate a testing period for a new application. If this environment has not existed before, it may be flagged as anomalous because it varies from historical spending patterns. So while automated tools will see this as anomalous, it is expected from the perspective of the humans launching the new environment, and the anomaly can be dismissed after ensuring it’s within the expected new cost of the new environment.
 
 The concept “inform to ignore” has been applied, which represents gathering information to justify taking no action.
 
@@ -108,7 +104,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Anomalous spend notification to stakeholder teams
 * Stakeholder real-time visibility into cost and usage reporting data
 * Documentation of triage process and expectation of personas
-
-[See finops.org for full content]
 
 ---

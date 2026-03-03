@@ -2,10 +2,6 @@
 
 # Data Analysis and Showback
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Data analysis and showback is the ability to leverage data, along with metadata on cloud resources and resource hierarchies, to create a near “real time” reporting mechanism for stakeholders which calls to attention: Total costs for the desired business entity, opportunities for cost avoidance, and KPIs for financial health (e.g. performance of rate reduction commitments, unit cost measures for key services, efficiency metrics aggregated by desired “team”,  organizational unit, etc...).
 
@@ -47,7 +43,7 @@ As cost showback is a fundamental aspect of FinOps, all FinOps domains should be
 * spend a significant amount of effort in collaboration with Engineering/Finance/Procurement/Product Management to build a cost reporting ecosystem which is aimed at helping consumers understand the important aspects of their spend, as well as, opportunities to optimize their spend.
 
 #### As an *Engineering Manager*, I will...
-* take an active role in consuming and fully understanding cost reporting so that I may: set achievable cost objectives for my teams, meet KPIs that are meaningful to my business partners, manage development cycles (producing business capabilities vs.implementing optimizations), and provide accurate forecasting.  
+* take an active role in consuming and fully understanding cost reporting so that I may: set achievable cost objectives for my teams, meet KPIs that are meaningful to my business partners, manage development cycles (producing business capabilities vs.implementing optimizations), and provide accurate forecasting.
 
 #### As a *Finance/Procurement Manager*, I will...
 * use the reporting ecosystem to develop a cost allocation model which accurately reflects the total cost of business capabilities, ensure that cloud cost models are allocating dollars to the desired level of the organization, and ensure integration with existing Finance processes.
@@ -69,7 +65,5 @@ Measures of success are represented in the context of cloud costs and may includ
 - Business Intelligence application/s
 - Consistent Marketing
 - Organizational Structure
-
-[See finops.org for full content]
 
 ---

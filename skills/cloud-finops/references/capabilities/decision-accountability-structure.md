@@ -2,10 +2,6 @@
 
 # Establishing a FinOps Decision & Accountability Structure
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 
 Establishing a FinOps Decision & Accountability Structure is about capturing an organization's FinOps-related roles, responsibilities and activities to bridge operational cloud cost management gaps between teams.  These decision-making and accountability structures help cross-functional teams work out the processes and decision trees they'll need to use to tackle challenges and resolve conflicts, in addition to having them be proactively available when they need to take action ahead of time.
@@ -90,7 +86,5 @@ Here are known information inputs that contribute to the measure(s) of success l
 - Decisions should be prioritized according to the impact an action will have, and that will determine the decision pace. Who decides should be someone that is highly aware of the context.
 - Each Capability has a different responsible personas for decision making, but the guidelines should be applicable.
 - Well defined impact, context, and pace scenarios based upon the organization's lines of business, products and responsible teams
-
-[See finops.org for full content]
 
 ---

@@ -2,16 +2,12 @@
 
 # Establishing FinOps Culture
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 The word "_Kuleana_" is Hawaiian for "Responsibility".  Kuleana encourages us to be accountable for all that we do and is the "ability to respond" to whatever is happening.
 
 With this in mind, this capability is about creating a movement to establish cultures of accountability so that your organization understands the practice of cloud cost management is really about leveraging FinOps to accelerate the creation of business value.
 
-An organization's FinOps culture embraces a long term roadmap of transformation and continuous improvement across all [the FinOps Domains](https://www.finops.org/framework/domains/) at each stage of [FinOps Maturity](https://www.finops.org/framework/maturity-model/).  
+An organization's FinOps culture embraces a long term roadmap of transformation and continuous improvement across all [the FinOps Domains](https://www.finops.org/framework/domains/) at each stage of [FinOps Maturity](https://www.finops.org/framework/maturity-model/).
 
 It requires finding allies in the face of opposition, winning over detractors during times of change, defining a common language, creating metrics to prove value, building enablement strategies to elevate stakeholder teams, and developing communication programs to inspire [the FinOps Personas](https://www.finops.org/framework/personas/) in your organization.
 
@@ -94,10 +90,5 @@ Measures of success are represented in the context of cloud costs and may includ
 - There are KPI's that quantify the use of rate-optimization constructs.
 * Unit Metrics are made available to track business value of cloud spend, enabling business agility.
 - The number of business leaders FinOps trained or certified.
-
-## Inputs
-_the information used that contributes to the measure(s) of success listed above; information here may include specific datasources, reports or any relevant input_
-
-[See finops.org for full content]
 
 ---

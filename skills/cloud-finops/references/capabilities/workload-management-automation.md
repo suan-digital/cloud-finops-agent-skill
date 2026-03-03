@@ -2,10 +2,6 @@
 
 # Workload Management & Automation
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 
 Workload Management & Automation focuses on running resources only when they are needed, and creating the mechanisms to automatically adjust what resources are running at any given time. This Capability gives FinOps teams the ability to match supply to demand most efficiently, and effectively optimize cloud usage through measurement of workload demand and provisioning capacity dynamically.
@@ -51,10 +47,5 @@ Here are some crowdsourced measures of success from our community:
     * Additionally, this same organization might create a measure of success where the critical testing phase cost shouldn’t exceed more than 30% of total non-production spending.
 
 There are likely many more cases and examples out there, so please get in touch with recommendations, changes, and feedback.
-
-## Inputs
-_the information used that contributes to the measure(s) of success listed above; information here may include specific datasources, reports or any relevant input_
-
-[See finops.org for full content]
 
 ---

@@ -2,10 +2,6 @@
 
 # Resource Utilization & Efficiency
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 In context to FinOps, resource utilization is about ensuring there is sufficient business value for the cloud costs associated with each class or type of resource being consumed. It is necessary to observe a resource’s utilization over time to understand if the performance, availability or other quality metrics are of value for the expense incurred.
 
@@ -26,7 +22,7 @@ The management of resource utilization and efficiency translates into identifyin
 - Able to put a $ value against costs that can be avoided by rightsizing underutilized or inefficient resources.
 - Able to measure the cost required in performing the action, summing costs across people, infrastructure, and paid solutions. For example:  "it will cost 50 man hours to make this change at an hourly rate of X”, or “it will cost $0.01/GB for a data efficiency platform to surface the savings potential of the data”.
 - Measure the cost required in performing the action - i.e. it’ll cost 50 man hours to make this change at an hourly figure of xyz.
-- Takes manual action to review recommendations and take appropriate action(s) to increase efficiencies.  
+- Takes manual action to review recommendations and take appropriate action(s) to increase efficiencies.
 
 #### Run
 - Uses cost and utilization data to drive automated processes to either:
@@ -60,10 +56,5 @@ Measures of success are represented in the context of cloud costs and may includ
 
 - Data efficiency is applied to at least 50% of stored data (i.e. net savings coverage is >50%)
 - Effective $/GB/mo storage rates are reduced by at least 30% relative to the S3 Standard baseline.
-
-## Inputs
-_the information used that contributes to the measure(s) of success listed above; information here may include specific datasources, reports or any relevant input_
-
-[See finops.org for full content]
 
 ---

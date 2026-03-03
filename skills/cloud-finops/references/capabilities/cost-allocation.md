@@ -2,10 +2,6 @@
 
 # Cost Allocation (Metadata & Hierarchy)
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Cost Allocation is the set of practices to divide up a consolidated invoice or bill among those who are responsible for its various component parts. In the context of FinOps this typically involves dividing up consolidated Cloud Service Provider invoices among various IT groups who use cloud within the organization.
 
@@ -84,7 +80,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Roles defined for cost ownership
 * Existing tag/label standards for operations, existing naming standards
 * Understanding of the capabilities of CI/CD, platform, cloud provider capabilities
-
-[See finops.org for full content]
 
 ---

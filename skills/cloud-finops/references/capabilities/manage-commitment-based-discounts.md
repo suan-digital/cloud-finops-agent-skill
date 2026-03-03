@@ -2,10 +2,6 @@
 
 # Managing Commitment Based Discounts
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 
 Cloud services have different approaches that leverage spend commitment to offer discounts on services. These vary from customized commercially negotiated discounts, to spend-based commitment discounts like AWS Savings Plans, resource-based commitment discounts like Google CUDs and others.
@@ -59,10 +55,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Analysis for making commitment purchases is supplemented with planned infrastructure and/or workload capacity changes
 * Committment purchases are spread over the year to allow for flexibility by always have some % of commitments expiring; this enables re-evaluation of commitment levels at regular intervals informed by forecasted future usage
 * Analysis and purchase decisions for commitments are made in the context of any negotiated commercial discounts offered to enterprises by the cloud service provider in exchange for overall cloud spend
-
-## Inputs
-_the information used that contributes to the measure(s) of success listed above; information here may include specific datasources, reports or any relevant input_
-
-[See finops.org for full content]
 
 ---

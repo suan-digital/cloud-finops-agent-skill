@@ -2,10 +2,6 @@
 
 # Budget Management
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 Budgeting for Cloud (or other IT expenses) is a process of collecting estimated expenses for a specific period of time.  Decisions on how to operate as a business, what to invest in and other strategic decisions are made based on budgets.  If actual expenses do not match the budget, it can impact the operations and other decisions that were made based on those budgets.
 
@@ -81,7 +77,5 @@ Measures of success are represented in the context of cloud costs and may includ
 * Forecasted cloud spend
 * Actuals from cloud bill
 * Usage/Rate Optimisation recommendations
-
-[See finops.org for full content]
 
 ---

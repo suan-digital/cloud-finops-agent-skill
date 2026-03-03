@@ -4,10 +4,6 @@
 
 This capability examines the intersection between FinOps with other standards. Widespread use of public cloud creates new challenges for traditional processes and the intention for this capability is to provide a place to capture FinOps' interactions with existing IT and financial standards being used by your organization.
 
-## Domains
-
-[See finops.org for full content]
-
 ## FinOps & ITAM
 
 ### Definition
@@ -71,10 +67,5 @@ _at least one measure of success; should be described in a context of cost; this
 _for example:_
 >* idle resource costs will not exceed 3% of total monthly cloud spend
 * anomaly costs will not exceed $150/month
-
-### Inputs
-_the information used that contributes to the measure(s) of success listed above; information here may include specific datasources, reports or any relevant input_
-
-[See finops.org for full content]
 
 ---

@@ -2,10 +2,6 @@
 
 # Measuring Unit Costs
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 This Capability is about developing metrics that reveal the business value of your cloud spend. By calculating cloud spend for total revenue, you can attach growth in cloud spending to your overall business growth. When these are in line, it makes sense that cloud spend isn’t wasted. When cloud spend is growing faster than the business, there may be cause for concern. For a customer-facing application, that unit might be a user or customer subscription; for an ecommerce platform, it might be a transaction; and for an airline, it might be a seat.
 
@@ -60,7 +56,5 @@ Defining and agreeing on the type of costs to report (e.g.: include or not disco
 Is your organization receiving an enterprise discount? Do you have a private pricing agreement with one of your vendors? Are you receiving bulk discounts on licensing costs? Do you amortize upfront payments for commitments? Regardless of which stage your organization is at in the crawl-walk-run cycle, it is important to consider these types of questions when measuring and reporting your unit costs.
 
 [Please see the full playbook](/projects/introduction-cloud-unit-economics/) for more details on how to implement Cloud Unit Economics with your FinOps team.
-
-[See finops.org for full content]
 
 ---

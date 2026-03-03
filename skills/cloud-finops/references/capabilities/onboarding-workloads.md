@@ -2,10 +2,6 @@
 
 # Onboarding Workloads
 
-## Domains
-
-[See finops.org for full content]
-
 ## Definition
 This capability is about establishing a cloud front door process to onboard brownfield and greenfield applications through financial viability and technical feasibility assessment criteria.
 
@@ -55,7 +51,5 @@ Information used that contributes to the measure(s) of success listed above are 
 | **Velocity** | - Developer productivity<br>- Release frequency<br>- Business agility |
 | **Innovation** | - Return on innovation<br>- Employee experience<br>- Customer satisfaction |
 | **Sustainability** | - Carbon footprint<br>- Power usage effectiveness<br>- Circular economy |
-
-[See finops.org for full content]
 
 ---
