@@ -24,7 +24,7 @@ This skill turns any AI agent into a FinOps advisor grounded in Foundation mater
 
 | Repo | Content | License |
 |---|---|---|
-| [finopsfoundation/framework](https://github.com/finopsfoundation/framework) | Capabilities, domains, personas | CC BY 4.0 |
+| [finopsfoundation/framework](https://github.com/finopsfoundation/framework) | Capabilities, personas, playbooks | CC BY 4.0 |
 | [FOCUS_Spec](https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS_Spec) | Billing data specification | Community Specification License 1.0 |
 | [finopsfoundation/kpis](https://github.com/finopsfoundation/kpis) | KPI definitions, waste sensors | CC BY-SA 4.0 |
 
@@ -45,22 +45,30 @@ This skill turns any AI agent into a FinOps advisor grounded in Foundation mater
 cloud-finops/
 ├── skills/cloud-finops/
 │   ├── SKILL.md                              ← Prompt + routing (only custom file)
-│   └── references/
-│       ├── capabilities/                     ← From framework repo
-│       ├── domains/                          ← From framework repo
-│       ├── personas.md                       ← From framework repo
+│   └── references/                           ← Auto-generated from .upstream/
+│       ├── capabilities/                     ← 18 capability files
+│       ├── personas.md                       ← 8 FinOps personas
 │       ├── focus/
-│       │   └── overview.md                   ← From FOCUS_Spec repo
-│       └── kpis/
-│           ├── kpi-definitions.md            ← From kpis repo
-│           └── waste-sensors.md              ← From kpis repo
+│       │   ├── overview.md                   ← FOCUS spec overview + glossary
+│       │   ├── columns.md                    ← 75 column definitions
+│       │   └── features.md                   ← 22 supported features
+│       ├── kpis/
+│       │   ├── kpi-definitions.md            ← KPI definitions
+│       │   ├── waste-sensors.md              ← Standardized waste sensors
+│       │   ├── reducing-waste.md             ← Waste reduction opportunities
+│       │   └── container-labels.md           ← Container cost allocation labels
+│       └── playbooks/                        ← 6 implementation playbooks
+├── .upstream/                                ← Git submodules (source of truth)
+│   ├── framework/                            ← finopsfoundation/framework
+│   ├── focus-spec/                           ← FOCUS_Spec (pinned to v1.3)
+│   └── kpis/                                 ← finopsfoundation/kpis
 ├── scripts/
+│   ├── transform-upstream.py                 ← Reads .upstream/, writes references/
 │   ├── check-coverage.py                     ← Framework coverage validation
-│   └── check-freshness.py                    ← Git-based content drift detection
+│   └── check-submodule-freshness.py          ← Submodule drift detection
 ├── .github/workflows/
-│   └── content-monitoring.yml                ← Weekly CI (coverage + freshness)
+│   └── content-monitoring.yml                ← Weekly CI
 ├── coverage-matrix.yaml                      ← Framework element → file mapping
-├── .content-baselines.json                   ← Git repo baselines for drift detection
 ├── .claude-plugin/marketplace.json           ← skills.sh marketplace config
 ├── INSTALLATION.md
 ├── CHANGELOG.md
@@ -69,12 +77,13 @@ cloud-finops/
 
 ## Content Monitoring
 
-Two scripts keep the skill aligned with upstream sources:
+Three scripts keep the skill aligned with upstream sources:
 
-- **`check-coverage.py`** — Validates that every Foundation framework capability maps to a reference file. Checks for new capability files in the `finopsfoundation/framework` GitHub repo and verifies FOCUS spec version.
-- **`check-freshness.py`** — Monitors three GitHub repos for content drift: framework capabilities/domains/personas, FOCUS releases and working draft, and KPI definitions. Compares against stored baselines.
+- **`transform-upstream.py`** — Reads `.upstream/` submodules and writes `references/`. Use `--check` in CI to verify committed files match.
+- **`check-coverage.py`** — Validates that every Foundation framework capability maps to a reference file and verifies FOCUS spec version.
+- **`check-submodule-freshness.py`** — Compares pinned submodule commits against remote HEAD to detect upstream drift.
 
-Both run weekly via GitHub Actions. Drift triggers an auto-created issue.
+All run weekly via GitHub Actions. Drift triggers an auto-created issue.
 
 ## Contributing
 
