@@ -1,8 +1,9 @@
 ---
 name: cloud-finops
 description: >
-  The FinOps Foundation framework transcribed and structured for AI agents. Covers all domains,
-  capabilities, personas, FOCUS billing spec, and waste sensor KPIs. Use for: cloud cost
+  The FinOps Foundation framework transcribed and structured for AI agents. Covers all 18
+  capabilities across six FinOps domains, eight personas, FOCUS billing spec, and waste sensor
+  KPIs. Use for: cloud cost
   optimization, FinOps assessment, commitment strategy, unit economics, forecasting, anomaly
   detection, cost allocation, showback/chargeback, governance, and waste identification.
 license: CC BY-SA 4.0
@@ -38,6 +39,8 @@ Foundation persona definitions.
 | **Executive (CEO/CTO/CFO/CIO)** | Business impact, savings ranges, risk | Implementation specifics |
 | **Product Owner** | Cost per feature, unit economics, budget impact | Infrastructure details |
 
+The 8 Foundation personas are grouped above for routing. Read `personas.md` for full definitions.
+
 ## How to Engage
 
 ### Full Assessment
@@ -48,26 +51,17 @@ For comprehensive FinOps engagements:
    and maturity. Skip questions already answered. Analyze any provided files.
 2. **Assess by capability** — Work through applicable capabilities from the routing table below.
    Each capability file has maturity criteria (Crawl/Walk/Run) and functional activities by role.
-   **Read:** capabilities as routed + `references/personas.md`
+   **Read:** routed capabilities + `personas.md`
 3. **Identify waste** — Cross-reference with waste sensors for concrete savings opportunities.
-   **Read:** `references/kpis/waste-sensors.md`
-4. **Structure findings** — Organize by domain, assess maturity per capability, quantify impact.
+   **Read:** `kpis/waste-sensors.md`
+4. **Structure findings** — Organize by the Domain → Capability Mapping table below, assess
+   maturity per capability, quantify impact.
 
 ### Targeted Question
 
 Route directly to the relevant capability using the routing table. No intake required. Same
 quality standards — specific, quantified, actionable. Load **only** the files listed in the
 routing table. Do not load unrelated capabilities.
-
-### Cost Anomaly Investigation
-
-When a user reports a cost spike:
-**Read:** `references/capabilities/manage-anomalies.md`
-
-### Multi-Cloud Cost Comparison
-
-When comparing costs across providers or normalizing billing data:
-**Read:** `references/focus/overview.md`, `references/capabilities/data-normalization.md`
 
 ## Route by Business Problem
 
@@ -77,20 +71,27 @@ When comparing costs across providers or normalizing billing data:
 | Can't attribute costs to teams | `capabilities/cost-allocation.md`, `capabilities/manage-shared-cloud-costs.md` | `capabilities/chargeback.md` |
 | Need commitment strategy | `capabilities/manage-commitment-based-discounts.md` | `capabilities/forecasting.md` |
 | Cost anomaly / unexpected spike | `capabilities/manage-anomalies.md` | `capabilities/analysis-showback.md` |
-| Need to forecast spend | `capabilities/forecasting.md`, `capabilities/budget-management.md` | |
-| Need unit economics / cost per customer | `capabilities/measure-unit-costs.md` | `capabilities/analysis-showback.md` |
+| Need to forecast spend | `capabilities/forecasting.md`, `capabilities/budget-management.md` | `playbooks/forecasting.md` |
+| Need unit economics / cost per customer | `capabilities/measure-unit-costs.md` | `capabilities/analysis-showback.md`, `playbooks/unit-economics.md` |
 | Governance / cost policy / automation | `capabilities/policy-governance.md`, `capabilities/workload-management-automation.md` | |
 | FinOps maturity assessment | All capabilities (assess each by Crawl/Walk/Run) | `personas.md` |
 | Multi-cloud cost comparison | `focus/overview.md`, `capabilities/data-normalization.md` | |
-| Waste identification | `kpis/waste-sensors.md`, `capabilities/utilization-efficiency.md` | |
+| Waste identification | `kpis/waste-sensors.md`, `kpis/reducing-waste.md`, `capabilities/utilization-efficiency.md` | |
 | Need showback / chargeback model | `capabilities/analysis-showback.md`, `capabilities/chargeback.md` | `capabilities/manage-shared-cloud-costs.md` |
 | Onboarding new workloads | `capabilities/onboarding-workloads.md` | `capabilities/cost-allocation.md` |
-| Building FinOps culture / enablement | `capabilities/establish-finops-culture.md`, `capabilities/education-enablement.md` | `capabilities/decision-accountability-structure.md` |
+| Building FinOps culture / enablement | `capabilities/establish-finops-culture.md`, `capabilities/education-enablement.md` | `capabilities/decision-accountability-structure.md`, `playbooks/adopting-finops.md` |
 | Need budgeting process | `capabilities/budget-management.md`, `capabilities/forecasting.md` | |
-| Which FinOps capabilities to prioritize | All domain files in `domains/` | `personas.md` |
+| Which FinOps capabilities to prioritize | Use Domain → Capability Mapping table below | `personas.md` |
 | Data normalization / ingestion issues | `capabilities/data-normalization.md` | `focus/overview.md` |
 | Integrating FinOps with ITAM/ITSM | `capabilities/asset-management.md` | `capabilities/policy-governance.md` |
 | Understanding FinOps KPIs | `kpis/kpi-definitions.md`, `kpis/waste-sensors.md` | |
+| FOCUS column/schema questions | `focus/columns.md` | `focus/overview.md` |
+| FOCUS SQL queries / features | `focus/features.md` | `focus/overview.md` |
+| Container / K8s cost allocation | `capabilities/cost-allocation.md`, `playbooks/container-costs.md` | `kpis/container-labels.md` |
+| How to allocate shared costs | `capabilities/manage-shared-cloud-costs.md`, `playbooks/shared-costs.md` | `capabilities/chargeback.md` |
+| Engineer role in FinOps | `playbooks/engineers-action.md` | `capabilities/utilization-efficiency.md` |
+| How to adopt FinOps | `playbooks/adopting-finops.md` | `capabilities/establish-finops-culture.md` |
+| Reduce waste / optimization | `kpis/reducing-waste.md`, `kpis/waste-sensors.md` | `capabilities/utilization-efficiency.md` |
 
 All paths are relative to `references/`.
 
@@ -110,11 +111,21 @@ Load additional capabilities when the user's situation matches these conditions:
 | User mentions right-sizing, idle, utilization, efficiency | `capabilities/utilization-efficiency.md` |
 | User mentions showback, chargeback, cost reporting | `capabilities/analysis-showback.md`, `capabilities/chargeback.md` |
 | User mentions FOCUS, billing normalization, multi-cloud data | `focus/overview.md` |
-| User mentions waste, savings opportunities | `kpis/waste-sensors.md` |
+| User mentions specific FOCUS column names, data types, schema, nullability | `focus/columns.md` |
+| User asks about SQL queries on FOCUS data, supported FOCUS features | `focus/features.md` |
+| User mentions waste, savings opportunities, optimization | `kpis/waste-sensors.md`, `kpis/reducing-waste.md` |
 | User mentions culture, training, enablement, adoption | `capabilities/establish-finops-culture.md`, `capabilities/education-enablement.md` |
 | User mentions governance, accountability, decision structure | `capabilities/decision-accountability-structure.md`, `capabilities/policy-governance.md` |
 | User mentions onboarding, new workloads, migration | `capabilities/onboarding-workloads.md` |
 | User mentions ITAM, ITSM, asset management | `capabilities/asset-management.md` |
+| User mentions containers, K8s, Kubernetes, namespace costs | `playbooks/container-costs.md`, `kpis/container-labels.md` |
+| User asks HOW to forecast (not just definition) | `playbooks/forecasting.md` |
+| User asks HOW to allocate shared costs | `playbooks/shared-costs.md` |
+| User asks about unit economics implementation | `playbooks/unit-economics.md` |
+| User asks about engineer role in FinOps, developer cost actions | `playbooks/engineers-action.md` |
+| User asks how to adopt or start FinOps | `playbooks/adopting-finops.md` |
+
+**Playbook loading rule:** Load at most ONE playbook per query alongside the relevant capability file. Playbooks are large — do not stack multiple playbooks.
 
 ## Domain → Capability Mapping
 
